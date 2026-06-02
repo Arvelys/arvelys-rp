@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,9 @@
 <title>Arvelys RP</title>
 
 <style>
-
 body{
     margin:0;
+    min-height:100vh;
     background:#0f0f0f;
     color:white;
     font-family:Arial, sans-serif;
@@ -18,190 +17,80 @@ body{
 }
 
 header{
-    padding:50px 20px;
-    border-bottom:2px solid #b8860b;
+    padding:60px 20px 30px;
 }
 
 .logo{
-    width:180px;
+    width:190px;
 }
 
 h1{
     color:#d4af37;
-    margin-top:20px;
+    margin:20px 0 5px;
+    font-size:42px;
 }
 
-nav{
-    background:#141414;
-    border-bottom:1px solid #333;
-    padding:15px;
-    position:sticky;
-    top:0;
+.subtitle{
+    color:#ccc;
+    margin-bottom:40px;
 }
 
-nav a{
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:white;
-}
-
-.section{
+.menu{
     max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:18px;
+    padding:20px;
 }
 
-.card{
+.menu a{
     background:#1a1a1a;
     border:1px solid #333;
-    border-radius:12px;
-    padding:25px;
-    margin-top:20px;
-}
-
-.card h2{
-    color:white;
-}
-
-.discord{
-    display:inline-block;
-    margin-top:35px;
-    background:#d4af37;
-    color:black;
+    border-radius:14px;
+    padding:28px 20px;
+    color:#d4af37;
     text-decoration:none;
-    padding:15px 30px;
-    border-radius:8px;
+    font-size:22px;
     font-weight:bold;
+    transition:0.2s;
 }
 
-.discord:hover{
-    background:#f0c94c;
+.menu a:hover{
+    border-color:#d4af37;
+    background:#222;
+    color:white;
+    transform:translateY(-3px);
 }
 
 footer{
     margin-top:50px;
-    padding:30px;
-    color:#999;
+    padding:25px;
+    color:#777;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
     <img src="ecuarvelys.png" class="logo">
-
     <h1>Arvelys RP</h1>
-
-    <p>Serveur SCUM RP francophone</p>
-
+    <p class="subtitle">Serveur SCUM RP francophone</p>
 </header>
 
-<nav>
-
-    <a href="#presentation">Présentation</a>
-    <a href="#lore">Lore</a>
-    <a href="#infos">Informations</a>
-    <a href="#zdnd">ZDND</a>
-    <a href="#reglement">Règlement</a>
-    <a href="#connexion">Connexion</a>
-
-</nav>
-
-<div class="section">
-
-    <div class="card" id="presentation">
-
-        <h2>Présentation</h2>
-
-        <p>
-            Bienvenue sur Arvelys RP.<br>
-            Un serveur orienté survie, immersion et jeu de rôle.
-        </p>
-
-    </div>
-
-    <div class="card" id="lore">
-
-        <h2>Lore</h2>
-
-        <p>
-            Le lore du serveur sera publié prochainement.
-        </p>
-
-    </div>
-
-    <div class="card" id="infos">
-
-        <h2>Informations</h2>
-
-        <p>
-            🌎 Serveur SCUM RP francophone<br><br>
-
-            🎯 Orientation :<br>
-            Survie immersive et jeu de rôle.<br><br>
-
-            👥 Communauté :<br>
-            Joueurs francophones.<br><br>
-
-            ⚙️ Statut :<br>
-            En préparation.
-        </p>
-
-    </div>
-
-    <div class="card" id="zdnd">
-
-        <h2>Zones de Non-Droit (ZDND)</h2>
-
-        <p>
-            Certaines zones de l'île sont classées ZDND.<br>
-            Dans ces secteurs, aucune protection RP n'est assurée et le PvP est autorisé.<br>
-            En y entrant, vous acceptez les risques et les conséquences de vos choix.
-        </p>
-
-    </div>
-
-    <div class="card" id="reglement">
-
-        <h2>Règlement</h2>
-
-        <p>
-            Le règlement complet sera publié prochainement.
-        </p>
-
-    </div>
-
-    <div class="card" id="connexion">
-
-        <h2>Connexion</h2>
-
-        <p>
-            Le serveur est actuellement en préparation.<br>
-            Les informations de connexion seront publiées prochainement.
-        </p>
-
-    </div>
-
-    <a class="discord" href="#">
-        Rejoindre le Discord
-    </a>
-
-</div>
+<main class="menu">
+    <a href="presentation.html">Présentation</a>
+    <a href="lore.html">Lore</a>
+    <a href="informations.html">Informations</a>
+    <a href="zdnd.html">ZDND</a>
+    <a href="reglement.html">Règlement</a>
+    <a href="connexion.html">Connexion</a>
+</main>
 
 <footer>
-
     © Arvelys RP
-
 </footer>
 
 </body>
-
 </html>
