@@ -10,11 +10,13 @@
 body{
     margin:0;
     min-height:100vh;
+
     background-color:#030303;
     background-image:
         linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url('carbone_site.png');
     background-repeat:repeat;
+
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
@@ -40,12 +42,22 @@ body{
     transform:scale(1.04);
 }
 
+.title{
+    margin:0 0 45px;
+    color:#d4af37;
+    font-size:52px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.35);
+}
+
 .page-banner{
     display:block;
     width:850px;
     max-width:90%;
     height:auto;
-    margin:-40px auto 20px auto;
+    margin:-40px auto 10px auto;
 }
 
 .card{
@@ -57,49 +69,60 @@ body{
     max-width:900px;
 
     margin:0 auto 25px auto;
-
     padding:45px 55px;
 
     box-shadow:0 0 30px rgba(0,0,0,0.45);
     text-align:left;
+    box-sizing:border-box;
 }
 
-.card h2{
+.section{
+    margin-bottom:0;
+}
+
+.section h2{
     color:#d4af37;
-    font-size:25px;
+    font-size:36px;
     margin:0 0 22px;
     text-align:center;
-    text-shadow:0 0 10px rgba(212,175,55,0.25);
 }
 
-.card p{
-    font-size:16px;
-    line-height:1.75;
+.section p{
+    font-size:20px;
+    line-height:1.8;
     margin:0 0 14px;
-    font-weight:bold;
+    text-align:center;
 }
 
-.card ul{
+ul{
     margin:0;
-    padding-left:22px;
-    text-align:left;
+    padding-left:28px;
 }
 
-.card li{
-    font-size:15px;
-    line-height:1.75;
-    margin-bottom:7px;
-    font-weight:bold;
+li{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:8px;
 }
 
 .lexique-link{
-    margin-top:22px;
+    margin-top:25px;
     text-align:center;
     color:#ddd;
-    font-size:16px;
+    font-size:20px;
 }
 
-.lexique-link a,
+.lexique-link a{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.2s ease;
+}
+
+.lexique-link a:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+}
+
 .zdnd-link{
     color:#d4af37;
     text-decoration:none;
@@ -107,15 +130,14 @@ body{
     transition:0.2s ease;
 }
 
-.lexique-link a:hover,
 .zdnd-link:hover{
     filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
 }
 
 .final-note{
-    margin-top:12px;
+    margin-top:45px;
     color:#d4af37;
-    font-size:22px;
+    font-size:24px;
     line-height:1.6;
     text-align:center;
     text-shadow:0 0 12px rgba(212,175,55,0.35);
@@ -125,40 +147,48 @@ footer{
     color:#444;
     font-size:12px;
     text-align:center;
-    margin-top:120px;
+    margin-top:150px;
     padding-bottom:25px;
 }
 
-@media(max-width:700px){
+@media(max-width:1000px){
     .page{
         padding:35px 18px 25px;
     }
 
+    .title{
+        font-size:38px;
+    }
+
     .page-banner{
-        margin:-25px auto 15px auto;
+        width:90%;
+        margin:-25px auto 10px auto;
     }
 
     .card{
-        max-width:100%;
-        padding:28px 24px;
+        width:95%;
+        padding:30px 24px;
     }
 
-    .card h2{
-        font-size:22px;
+    .section h2{
+        font-size:28px;
     }
 
-    .card p,
-    .card li,
+    .section p,
+    li{
+        font-size:18px;
+    }
+
     .lexique-link{
-        font-size:15px;
+        font-size:17px;
     }
 
     .final-note{
-        font-size:19px;
+        font-size:20px;
     }
 
     footer{
-        margin-top:80px;
+        margin-top:90px;
     }
 }
 </style>
@@ -170,94 +200,116 @@ footer{
 
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
-    <img src="reglement_site.png" alt="Règlement" class="page-banner">
+    <img src="reglement_site.png"
+         alt="Règlement"
+         class="page-banner">
 
     <section class="card">
-        <h2>✒️ Obligatoire</h2>
-        <ul>
-            <li>Le RolePlay et le Fair-Play sont obligatoires en toutes circonstances.</li>
-            <li>Un microphone fonctionnel est obligatoire.</li>
-            <li>Un Nom & Prénom cohérents et RolePlay sont obligatoires.</li>
-            <li>Respectez les autres joueurs ainsi que le staff.</li>
-            <li>Jouez la peur, la douleur et les conséquences de vos actions.</li>
-            <li>Privilégiez les interactions et les scènes RP avant la violence.</li>
-            <li>Prenez connaissance du <a href="lore.html" class="zdnd-link">Lore</a> du serveur et appuyez-vous dessus pour construire l'histoire de votre personnage.</li>
-        </ul>
+        <div class="section">
+            <h2>✒️ Obligatoire</h2>
+            <ul>
+                <li>Le RolePlay et le Fair-Play sont obligatoires en toutes circonstances.</li>
+                <li>Un microphone fonctionnel est obligatoire.</li>
+                <li>Un Nom & Prénom cohérents et RolePlay sont obligatoires.</li>
+                <li>Respectez les autres joueurs ainsi que le staff.</li>
+                <li>Jouez la peur, la douleur et les conséquences de vos actions.</li>
+                <li>Privilégiez les interactions et les scènes RP avant la violence.</li>
+                <li>
+                    Prenez connaissance du
+                    <a href="lore.html" class="zdnd-link">Lore</a>
+                    du serveur et appuyez-vous dessus pour construire l'histoire de votre personnage.
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section class="card">
-        <h2>🚫 Interdit</h2>
-        <ul>
-            <li>Le Metagaming.</li>
-            <li>Le Powergaming.</li>
-            <li>Le Force RP.</li>
-            <li>Le Revenge Kill.</li>
-            <li>Le No Fear.</li>
-            <li>Le Free Kill.</li>
-            <li>Le Car Kill volontaire.</li>
-            <li>Le Stream Sniping.</li>
-            <li>L'exploitation de bugs ou de failles du jeu.</li>
-            <li>Les insultes HRP, le harcèlement et les comportements toxiques.</li>
-            <li>Toute action visant volontairement à nuire à l'expérience de jeu des autres joueurs.</li>
-        </ul>
+        <div class="section">
+            <h2>🚫 Interdit</h2>
+            <ul>
+                <li>Le Metagaming.</li>
+                <li>Le Powergaming.</li>
+                <li>Le Force RP.</li>
+                <li>Le Revenge Kill.</li>
+                <li>Le No Fear.</li>
+                <li>Le Free Kill.</li>
+                <li>Le Car Kill volontaire.</li>
+                <li>Le Stream Sniping.</li>
+                <li>L'exploitation de bugs ou de failles du jeu.</li>
+                <li>Les insultes HRP, le harcèlement et les comportements toxiques.</li>
+                <li>Toute action visant volontairement à nuire à l'expérience de jeu des autres joueurs.</li>
+            </ul>
 
-        <p class="lexique-link">
-            Certains termes utilisés dans ce règlement sont expliqués dans notre
-            <a href="lexique.html">Lexique</a>.
-        </p>
+            <p class="lexique-link">
+                Certains termes utilisés dans ce règlement sont expliqués dans notre
+                <a href="lexique.html">Lexique</a>.
+            </p>
+        </div>
     </section>
 
     <section class="card">
-        <h2>☠️ Zones de Non Droit</h2>
-        <p>Les <a href="zdnd.html" class="zdnd-link">ZDND</a> correspondent aux zones rouges visibles sur la carte.</p>
-        <ul>
-            <li>Les <a href="zdnd.html" class="zdnd-link">ZDND</a> ne possèdent aucune règle.</li>
-            <li>Vous pouvez attaquer, braquer ou tuer sans scène préalable.</li>
-            <li>Le RP reste obligatoire si vous interagissez avec d'autres joueurs.</li>
-            <li>Le Fair-Play n'est pas obligatoire dans ces zones.</li>
-            <li>Il est interdit de tirer sur des joueurs depuis l'intérieur d'une <a href="zdnd.html" class="zdnd-link">ZDND</a> vers l'extérieur.</li>
-            <li>Il est interdit de tirer sur des joueurs depuis l'extérieur d'une <a href="zdnd.html" class="zdnd-link">ZDND</a> vers l'intérieur.</li>
-            <li>⚠️ Les deux dernières règles ne s'appliquent pas si le conflit a démarré avant le changement de zone.</li>
-        </ul>
+        <div class="section">
+            <h2>☠️ Zones de Non Droit</h2>
+
+            <p>Les <a href="zdnd.html" class="zdnd-link">ZDND</a> correspondent aux zones rouges visibles sur la carte.</p>
+
+            <ul>
+                <li>Les <a href="zdnd.html" class="zdnd-link">ZDND</a> ne possèdent aucune règle.</li>
+                <li>Vous pouvez attaquer, braquer ou tuer sans scène préalable.</li>
+                <li>Le RP reste obligatoire si vous interagissez avec d'autres joueurs.</li>
+                <li>Le Fair-Play n'est pas obligatoire dans ces zones.</li>
+                <li>Il est interdit de tirer sur des joueurs depuis l'intérieur d'une <a href="zdnd.html" class="zdnd-link">ZDND</a> vers l'extérieur.</li>
+                <li>Il est interdit de tirer sur des joueurs depuis l'extérieur d'une <a href="zdnd.html" class="zdnd-link">ZDND</a> vers l'intérieur.</li>
+                <li>⚠️ Les deux dernières règles ne s'appliquent pas si le conflit a démarré avant le changement de zone.</li>
+            </ul>
+        </div>
     </section>
 
     <section class="card">
-        <h2>🌴 Hors <a href="zdnd.html" class="zdnd-link">ZDND</a></h2>
-        <ul>
-            <li>Toute agression doit avoir une raison RP valable.</li>
-            <li>Une scène RP doit être proposée avant de tuer un joueur.</li>
-            <li>Le Free Kill est interdit.</li>
-            <li>Tuer un joueur uniquement pour récupérer son équipement est interdit.</li>
-            <li>Le braquage, l'enlèvement ou les menaces sont autorisés s'ils restent cohérents RP.</li>
-            <li>Le RP doit toujours être privilégié à la violence.</li>
-        </ul>
+        <div class="section">
+            <h2>🌴 Hors <a href="zdnd.html" class="zdnd-link">ZDND</a></h2>
+
+            <ul>
+                <li>Toute agression doit avoir une raison RP valable.</li>
+                <li>Une scène RP doit être proposée avant de tuer un joueur.</li>
+                <li>Le Free Kill est interdit.</li>
+                <li>Tuer un joueur uniquement pour récupérer son équipement est interdit.</li>
+                <li>Le braquage, l'enlèvement ou les menaces sont autorisés s'ils restent cohérents RP.</li>
+                <li>Le RP doit toujours être privilégié à la violence.</li>
+            </ul>
+        </div>
     </section>
 
     <section class="card">
-        <h2>🛠️ Constructions</h2>
-        <p>Vous pouvez construire où vous le souhaitez, sous réserve de respecter les règles suivantes :</p>
-        <ul>
-            <li>Les constructions ne doivent pas bloquer les routes.</li>
-            <li>Les constructions ne doivent pas bloquer les accès aux villes, traders, bunkers ou points d'intérêt.</li>
-            <li>Une largeur minimale permettant le passage d'un véhicule doit être conservée entre la route et vos constructions.</li>
-            <li>Les constructions abusives ou visant à bloquer volontairement le gameplay pourront être supprimées par le staff.</li>
-        </ul>
+        <div class="section">
+            <h2>🛠️ Constructions</h2>
+
+            <p>Vous pouvez construire où vous le souhaitez, sous réserve de respecter les règles suivantes :</p>
+
+            <ul>
+                <li>Les constructions ne doivent pas bloquer les routes.</li>
+                <li>Les constructions ne doivent pas bloquer les accès aux villes, traders, bunkers ou points d'intérêt.</li>
+                <li>Une largeur minimale permettant le passage d'un véhicule doit être conservée entre la route et vos constructions.</li>
+                <li>Les constructions abusives ou visant à bloquer volontairement le gameplay pourront être supprimées par le staff.</li>
+            </ul>
+        </div>
     </section>
 
     <section class="card">
-        <h2>⚖️ Dispositions générales</h2>
-        <ul>
-            <li>En cas de litige, le staff se réserve le droit de trancher selon la situation.</li>
-            <li>Toute tentative de contournement du règlement sera sanctionnée.</li>
-            <li>Le bon sens prime toujours sur le règlement.</li>
-        </ul>
-    </section>
+        <div class="section">
+            <h2>⚖️ Dispositions générales</h2>
 
-    <section class="card">
-        <p class="final-note">
-            Le but du serveur est de créer des histoires et des interactions RP,<br>
-            pas de gagner à tout prix.
-        </p>
+            <ul>
+                <li>En cas de litige, le staff se réserve le droit de trancher selon la situation.</li>
+                <li>Toute tentative de contournement du règlement sera sanctionnée.</li>
+                <li>Le bon sens prime toujours sur le règlement.</li>
+            </ul>
+
+            <p class="final-note">
+                Le but du serveur est de créer des histoires et des interactions RP,<br>
+                pas de gagner à tout prix.
+            </p>
+        </div>
     </section>
 
     <div style="margin-top:60px;">
