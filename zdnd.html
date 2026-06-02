@@ -42,16 +42,6 @@ body{
     transform:scale(1.04);
 }
 
-.title{
-    margin:0;
-    color:#d4af37;
-    font-size:52px;
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    text-shadow:0 0 14px rgba(212,175,55,0.35);
-}
-
 .page-banner{
     display:block;
     width:850px;
@@ -59,7 +49,7 @@ body{
     height:auto;
     margin:20px auto 10px auto;
 }
-    
+
 .subtitle{
     margin-top:15px;
     color:#c9c9c9;
@@ -72,12 +62,49 @@ body{
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
     padding:50px;
+    text-align:center;
 }
 
-.placeholder{
-    color:#777;
-    font-size:22px;
+.card h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:18px;
     line-height:1.8;
+    color:#e0e0e0;
+}
+
+.card ul{
+    max-width:900px;
+    margin:0 auto;
+    text-align:left;
+    line-height:1.9;
+    color:#e0e0e0;
+}
+
+.card li{
+    margin-bottom:8px;
+}
+
+.zdnd-link{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.2s ease;
+}
+
+.zdnd-link:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+}
+
+.zdnd-image{
+    width:100%;
+    max-width:1000px;
+    border:1px solid rgba(212,175,55,0.30);
+    border-radius:10px;
+    margin-bottom:25px;
 }
 
 footer{
@@ -90,10 +117,6 @@ footer{
 
 @media(max-width:900px){
 
-    .title{
-        font-size:38px;
-    }
-
     .subtitle{
         font-size:18px;
     }
@@ -102,8 +125,9 @@ footer{
         padding:30px;
     }
 
-    .placeholder{
-        font-size:18px;
+    .card p,
+    .card li{
+        font-size:16px;
     }
 }
 </style>
@@ -116,21 +140,85 @@ footer{
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
     <img src="zdnd_site.png"
-     alt="Zones de Non Droit"
-     class="page-banner">
+         alt="Zones de Non Droit"
+         class="page-banner">
 
     <p class="subtitle">
-        Cartographie officielle des ZDND du serveur
+        Cartographie officielle des Zones de Non Droit du serveur
     </p>
 
     <div class="card">
 
-        <div class="placeholder">
-            📍 Les captures d'écran des ZDND seront ajoutées prochainement.
-            <br><br>
-            Cette page présentera l'ensemble des zones de non droit du serveur
-            ainsi que leurs limites visibles.
-        </div>
+        <h2>⚠️ Zones de Non Droit (ZDND)</h2>
+
+        <p>
+            Comme indiqué dans le
+            <a href="reglement.html" class="zdnd-link">Règlement du serveur</a>,
+            les Zones de Non Droit (ZDND) sont des secteurs où les règles habituelles
+            liées aux agressions et aux affrontements ne s'appliquent plus.
+        </p>
+
+        <p>
+            Entrer dans une ZDND revient à accepter les risques qui y sont associés.
+        </p>
+
+        <br>
+
+        <h2>📜 Règles applicables</h2>
+
+        <ul>
+            <li>Le RolePlay reste obligatoire dès lors qu'une interaction a lieu entre joueurs.</li>
+            <li>Le Fair-Play n'est pas obligatoire à l'intérieur des ZDND.</li>
+            <li>Les joueurs pénètrent dans ces zones à leurs risques et périls.</li>
+            <li>100% de l'équipement transporté peut être récupéré par d'autres joueurs.</li>
+            <li>Les véhicules présents dans une ZDND peuvent également être volés ou récupérés.</li>
+        </ul>
+
+        <br>
+
+        <h2>⚠️ Important</h2>
+
+        <p>
+            Toutes les Zones de Non Droit ne sont pas forcément visibles sur la carte.
+        </p>
+
+        <p>
+            Les lieux suivants doivent toujours être considérés comme des ZDND :
+        </p>
+
+        <ul>
+            <li>Toute zone matérialisée en rouge sur la carte du serveur.</li>
+            <li>Tous les secteurs protégés par des robots de sécurité.</li>
+            <li>Tous les bunkers, qu'ils soient actifs, abandonnés ou non.</li>
+        </ul>
+
+        <p>
+            Soyez vigilants et considérez ces secteurs comme des zones hostiles.
+        </p>
+
+        <br>
+
+        <h2>🗺️ Cartographie</h2>
+
+        <p>
+            Vous trouverez ci-dessous plusieurs captures d'écran présentant les principales
+            Zones de Non Droit actuellement connues sur le serveur.
+        </p>
+
+        <p>
+            Ces illustrations ont pour objectif d'aider les joueurs à identifier les secteurs
+            les plus dangereux de l'île, mais elles ne remplacent pas votre vigilance en jeu.
+        </p>
+
+        <br><br>
+
+        <!-- Remplace les fichiers par tes captures -->
+
+        <img src="zdnd_01.jpg" alt="ZDND 1" class="zdnd-image">
+
+        <img src="zdnd_02.jpg" alt="ZDND 2" class="zdnd-image">
+
+        <img src="zdnd_03.jpg" alt="ZDND 3" class="zdnd-image">
 
     </div>
 
@@ -139,8 +227,6 @@ footer{
     </div>
 
 </div>
-
-<footer>
 
 <footer>
     © Arvelys RP
