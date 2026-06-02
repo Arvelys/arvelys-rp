@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +31,23 @@ h1{
     margin-top:20px;
 }
 
+nav{
+    background:#151515;
+    padding:15px;
+    border-bottom:1px solid #333;
+}
+
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:white;
+}
+
 .section{
     max-width:900px;
     margin:auto;
@@ -39,29 +57,39 @@ h1{
 .card{
     background:#1a1a1a;
     border:1px solid #333;
-    border-radius:10px;
-    padding:20px;
-    margin-top:20px;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    color:white;
+    margin-top:0;
 }
 
 .discord{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
+    margin-top:15px;
     background:#d4af37;
     color:black;
+    padding:15px 30px;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:10px;
     font-weight:bold;
 }
 
+.discord:hover{
+    background:#f0c94c;
+}
+
 footer{
-    margin-top:50px;
+    margin-top:40px;
     padding:20px;
-    color:#888;
+    color:#999;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -76,23 +104,73 @@ footer{
 
 </header>
 
+<nav>
+
+<a href="#presentation">Présentation</a>
+<a href="#infos">Informations</a>
+<a href="#zdnd">ZDND</a>
+<a href="#reglement">Règlement</a>
+<a href="#connexion">Connexion</a>
+
+</nav>
+
 <div class="section">
 
-<div class="card">
+<div class="card" id="presentation">
+
 <h2>Présentation</h2>
 
 <p>
-Bienvenue sur Arvelys RP.
+Bienvenue sur Arvelys RP.<br>
 Un serveur orienté survie, immersion et jeu de rôle.
 </p>
 
 </div>
 
-<div class="card">
-<h2>État du projet</h2>
+<div class="card" id="infos">
+
+<h2>Informations serveur</h2>
 
 <p>
-Le serveur est actuellement en préparation.
+🌍 Serveur SCUM RP francophone<br>
+🎙️ Micro obligatoire<br>
+⚔️ RP avant PvP<br>
+🏗️ Construction autorisée hors zones protégées
+</p>
+
+</div>
+
+<div class="card" id="zdnd">
+
+<h2>Zones Dangereuses (ZDND)</h2>
+
+<p>
+Les ZDND sont des zones PvP sans protection RP.<br>
+En entrant dans ces secteurs, vous acceptez les risques.
+</p>
+
+</div>
+
+<div class="card" id="reglement">
+
+<h2>Règlement simplifié</h2>
+
+<p>
+✔ Respect des autres joueurs<br>
+✔ Restez cohérent avec votre personnage<br>
+✔ Pas de triche ni exploitation de bugs<br>
+✔ Bon sens avant tout
+</p>
+
+</div>
+
+<div class="card" id="connexion">
+
+<h2>Connexion</h2>
+
+<p>
+Le serveur est actuellement en préparation.<br>
+Les informations de connexion seront publiées prochainement.
 </p>
 
 </div>
@@ -110,4 +188,5 @@ Rejoindre le Discord
 </footer>
 
 </body>
+
 </html>
