@@ -7,89 +7,135 @@
 <title>Arvelys RP</title>
 
 <style>
+
 body{
     margin:0;
-    min-height:100vh;
-    background:#0f0f0f;
+    background:#0b0b0b;
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
 }
 
 header{
-    padding:60px 20px 30px;
+    padding:50px 20px;
 }
 
 .logo{
-    width:190px;
+    width:180px;
 }
 
 h1{
     color:#d4af37;
-    margin:20px 0 5px;
-    font-size:42px;
+    font-size:60px;
+    margin:20px 0 10px;
 }
 
 .subtitle{
-    color:#ccc;
-    margin-bottom:40px;
+    font-size:28px;
+}
+
+.hero{
+    max-width:1400px;
+    margin:0 auto 50px auto;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #333;
+}
+
+.hero img{
+    width:100%;
+    display:block;
 }
 
 .menu{
-    max-width:900px;
-    margin:0 auto;
+    max-width:800px;
+    margin:0 auto 60px auto;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-    gap:18px;
-    padding:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.menu a{
-    background:#1a1a1a;
+.btn{
+    background:#181818;
     border:1px solid #333;
-    border-radius:14px;
-    padding:28px 20px;
+    border-radius:12px;
+
     color:#d4af37;
     text-decoration:none;
-    font-size:22px;
+
+    font-size:34px;
     font-weight:bold;
+
+    padding:35px 15px;
+
     transition:0.2s;
 }
 
-.menu a:hover{
-    border-color:#d4af37;
+.btn:hover{
     background:#222;
-    color:white;
-    transform:translateY(-3px);
+    border-color:#d4af37;
 }
 
 footer{
-    margin-top:50px;
-    padding:25px;
     color:#777;
+    padding:30px;
 }
+
+@media(max-width:900px){
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    .subtitle{
+        font-size:20px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <img src="ecuarvelys.png" class="logo">
-    <h1>Arvelys RP</h1>
-    <p class="subtitle">Serveur SCUM RP francophone</p>
+
+<img src="ecuarvelys.png" class="logo">
+
+<h1>Arvelys RP</h1>
+
+<div class="subtitle">
+Serveur SCUM RP francophone
+</div>
+
 </header>
 
-<main class="menu">
-    <a href="presentation.html">Présentation</a>
-    <a href="lore.html">Lore</a>
-    <a href="informations.html">Informations</a>
-    <a href="zdnd.html">ZDND</a>
-    <a href="reglement.html">Règlement</a>
-    <a href="connexion.html">Connexion</a>
-</main>
+<div class="hero">
+    <img src="arvelys_roleplay_baniere.png" alt="Arvelys RP">
+</div>
+
+<div class="menu">
+
+<a href="#" class="btn">Présentation</a>
+
+<a href="#" class="btn">Lore</a>
+
+<a href="#" class="btn">Informations</a>
+
+<a href="#" class="btn">ZDND</a>
+
+<a href="#" class="btn">Règlement</a>
+
+<a href="#" class="btn">Connexion</a>
+
+</div>
 
 <footer>
-    © Arvelys RP
+© Arvelys RP
 </footer>
 
 </body>
