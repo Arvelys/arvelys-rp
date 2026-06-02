@@ -18,7 +18,7 @@ body{
 
 .hero{
     max-width:1500px;
-    margin:40px auto 45px;
+    margin:35px auto 45px;
     border-radius:14px;
     overflow:hidden;
     border:1px solid #333;
@@ -31,41 +31,45 @@ body{
 }
 
 .menu{
-    max-width:900px;
+    max-width:1050px;
     margin:0 auto 60px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px 35px;
     padding:0 20px;
+    align-items:center;
 }
 
 .menu a{
-    background:#181818;
-    border:1px solid #333;
-    border-radius:12px;
-    color:#d4af37;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:95px;
     text-decoration:none;
-    font-size:26px;
-    font-weight:bold;
-    padding:28px 15px;
     transition:0.2s;
 }
 
-.menu a:hover{
-    background:#222;
-    border-color:#d4af37;
-    color:white;
-    transform:translateY(-3px);
+.menu a img{
+    max-width:100%;
+    max-height:95px;
+    object-fit:contain;
+    transition:0.2s;
+}
+
+.menu a:hover img{
+    transform:scale(1.06);
+    filter:drop-shadow(0 0 14px rgba(212,175,55,0.65));
 }
 
 footer{
     color:#777;
     padding:25px;
+    font-size:14px;
 }
 
 @media(max-width:900px){
     .hero{
-        margin:20px auto 30px;
+        margin:20px auto 35px;
         border-radius:0;
         border-left:0;
         border-right:0;
@@ -73,6 +77,15 @@ footer{
 
     .menu{
         grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .menu a{
+        min-height:80px;
+    }
+
+    .menu a img{
+        max-height:80px;
     }
 }
 </style>
@@ -85,12 +98,31 @@ footer{
 </div>
 
 <main class="menu">
-    <a href="presentation.html">Présentation</a>
-    <a href="lore.html">Lore</a>
-    <a href="informations.html">Informations</a>
-    <a href="zdnd.html">ZDND</a>
-    <a href="reglement.html">Règlement</a>
-    <a href="connexion.html">Connexion</a>
+
+    <a href="presentation.html">
+        <img src="presentation_site.png" alt="Présentation">
+    </a>
+
+    <a href="lore.html">
+        <img src="lore_site.png" alt="Lore">
+    </a>
+
+    <a href="informations.html">
+        <img src="informations_site.png" alt="Informations">
+    </a>
+
+    <a href="zdnd.html">
+        <img src="zdnd_site.png" alt="ZDND">
+    </a>
+
+    <a href="reglement.html">
+        <img src="reglement_site.png" alt="Règlement">
+    </a>
+
+    <a href="connexion.html">
+        <img src="connexion_site.png" alt="Connexion">
+    </a>
+
 </main>
 
 <footer>
