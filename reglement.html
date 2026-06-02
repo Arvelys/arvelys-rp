@@ -23,7 +23,7 @@ body{
 }
 
 .page{
-    max-width:1000px;
+    max-width:1100px;
     margin:0 auto;
     padding:60px 20px 30px;
 }
@@ -58,36 +58,55 @@ body{
     border-radius:14px;
     padding:45px 55px;
     box-shadow:0 0 30px rgba(0,0,0,0.45);
+    text-align:left;
 }
 
-.card h2{
+.section{
+    margin-bottom:42px;
+}
+
+.section:last-child{
+    margin-bottom:0;
+}
+
+.section h2{
     color:#d4af37;
     font-size:30px;
-    margin:0 0 28px;
+    margin:0 0 22px;
+    text-align:center;
 }
 
-.rule-list{
-    list-style:none;
-    padding:0;
+.section p{
+    font-size:19px;
+    line-height:1.7;
+    margin:0 0 14px;
+}
+
+ul{
     margin:0;
-    font-size:20px;
-    line-height:1.9;
+    padding-left:25px;
 }
 
-.rule-list li{
-    margin-bottom:12px;
+li{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:8px;
 }
 
-.rule-list strong{
+.separator{
+    width:140px;
+    height:1px;
+    background:rgba(212,175,55,0.45);
+    margin:38px auto;
+}
+
+.final-note{
+    margin-top:45px;
     color:#d4af37;
-}
-
-.note{
-    margin-top:40px;
-    color:#d4af37;
-    font-size:22px;
+    font-size:24px;
     line-height:1.6;
-    text-shadow:0 0 12px rgba(212,175,55,0.28);
+    text-align:center;
+    text-shadow:0 0 12px rgba(212,175,55,0.35);
 }
 
 footer{
@@ -111,11 +130,16 @@ footer{
         padding:30px 24px;
     }
 
-    .rule-list{
-        font-size:18px;
+    .section h2{
+        font-size:25px;
     }
 
-    .note{
+    .section p,
+    li{
+        font-size:17px;
+    }
+
+    .final-note{
         font-size:20px;
     }
 
@@ -136,20 +160,101 @@ footer{
 
     <section class="card">
 
-        <h2>Règlement serveur</h2>
+        <div class="section">
+            <h2>1️⃣ Obligatoire</h2>
+            <ul>
+                <li>Le RolePlay et le Fair-Play sont obligatoires en toutes circonstances.</li>
+                <li>Un microphone fonctionnel est obligatoire.</li>
+                <li>Un Nom & Prénom cohérents et RolePlay sont obligatoires.</li>
+                <li>Respectez les autres joueurs ainsi que le staff.</li>
+                <li>Jouez la peur, la douleur et les conséquences de vos actions.</li>
+                <li>Respectez les décisions du staff.</li>
+                <li>Privilégiez les interactions et les scènes RP avant la violence.</li>
+                <li>Signalez les bugs importants au staff.</li>
+            </ul>
+        </div>
 
-        <ul class="rule-list">
-            <li><strong>1.</strong> Respect des autres joueurs.</li>
-            <li><strong>2.</strong> Le RolePlay passe avant le PvP.</li>
-            <li><strong>3.</strong> Micro obligatoire en jeu.</li>
-            <li><strong>4.</strong> Aucun cheat, glitch ou exploitation de bug.</li>
-            <li><strong>5.</strong> Restez cohérent avec votre personnage.</li>
-            <li><strong>6.</strong> Les conflits doivent rester RP.</li>
-            <li><strong>7.</strong> Le bon sens prime sur les failles du règlement.</li>
-        </ul>
+        <div class="separator"></div>
 
-        <p class="note">
-            Le règlement complet sera ajusté et publié avant l'ouverture officielle du serveur.
+        <div class="section">
+            <h2>2️⃣ Interdit</h2>
+            <ul>
+                <li>Le Metagaming.</li>
+                <li>Le Powergaming.</li>
+                <li>Le Force RP.</li>
+                <li>Le Revenge Kill.</li>
+                <li>Le No Fear.</li>
+                <li>Le Free Kill.</li>
+                <li>Le Car Kill volontaire.</li>
+                <li>Le Stream Sniping.</li>
+                <li>L'exploitation de bugs ou de failles du jeu.</li>
+                <li>Les insultes HRP, le harcèlement et les comportements toxiques.</li>
+                <li>Toute action visant volontairement à nuire à l'expérience de jeu des autres joueurs.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <h2>3️⃣ Zones de Non Droit</h2>
+
+            <p>Les ZDND correspondent aux zones rouges visibles sur la carte.</p>
+
+            <ul>
+                <li>Les ZDND ne possèdent aucune règle PvP.</li>
+                <li>Vous pouvez attaquer, braquer ou tuer sans scène préalable.</li>
+                <li>Le RP reste obligatoire si vous interagissez avec d'autres joueurs.</li>
+                <li>Le Fair-Play n'est pas obligatoire dans ces zones.</li>
+                <li>Il est interdit d'attaquer ou de tirer sur des joueurs depuis l'extérieur d'une ZDND vers l'intérieur.</li>
+                <li>Il est interdit d'utiliser une ZDND comme refuge immédiat pour échapper à une scène RP en cours.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <h2>4️⃣ Hors ZDND</h2>
+
+            <ul>
+                <li>Toute agression doit avoir une raison RP valable.</li>
+                <li>Une scène RP doit être proposée avant de tuer un joueur.</li>
+                <li>Le Free Kill est interdit.</li>
+                <li>Tuer un joueur uniquement pour récupérer son équipement est interdit.</li>
+                <li>Le braquage, l'enlèvement ou les menaces sont autorisés s'ils restent cohérents RP.</li>
+                <li>Le RP doit toujours être privilégié à la violence.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <h2>5️⃣ Constructions</h2>
+
+            <p>Vous pouvez construire où vous le souhaitez, sous réserve de respecter les règles suivantes :</p>
+
+            <ul>
+                <li>Les constructions ne doivent pas bloquer les routes.</li>
+                <li>Les constructions ne doivent pas bloquer les accès aux villes, traders, bunkers ou points d'intérêt.</li>
+                <li>Une largeur minimale permettant le passage d'un véhicule doit être conservée entre la route et vos constructions.</li>
+                <li>Les constructions abusives ou visant à bloquer volontairement le gameplay pourront être supprimées par le staff.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <h2>⚖️ Dispositions générales</h2>
+
+            <ul>
+                <li>En cas de litige, le staff se réserve le droit de trancher selon la situation.</li>
+                <li>Toute tentative de contournement du règlement sera sanctionnée.</li>
+                <li>Le bon sens prime toujours sur le règlement.</li>
+            </ul>
+        </div>
+
+        <p class="final-note">
+            Le but du serveur est de créer des histoires et des interactions RP,<br>
+            pas de gagner à tout prix.
         </p>
 
     </section>
