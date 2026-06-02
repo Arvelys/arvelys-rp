@@ -7,135 +7,94 @@
 <title>Arvelys RP</title>
 
 <style>
-
 body{
     margin:0;
+    min-height:100vh;
     background:#0b0b0b;
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
 }
 
-header{
-    padding:50px 20px;
-}
-
-.logo{
-    width:180px;
-}
-
-h1{
-    color:#d4af37;
-    font-size:60px;
-    margin:20px 0 10px;
-}
-
-.subtitle{
-    font-size:28px;
-}
-
 .hero{
-    max-width:1400px;
-    margin:0 auto 50px auto;
-    border-radius:12px;
+    max-width:1500px;
+    margin:40px auto 45px;
+    border-radius:14px;
     overflow:hidden;
     border:1px solid #333;
 }
 
 .hero img{
-    width:100%;
     display:block;
+    width:100%;
+    height:auto;
 }
 
 .menu{
-    max-width:800px;
-    margin:0 auto 60px auto;
-
+    max-width:900px;
+    margin:0 auto 60px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
+    padding:0 20px;
 }
 
-.btn{
+.menu a{
     background:#181818;
     border:1px solid #333;
     border-radius:12px;
-
     color:#d4af37;
     text-decoration:none;
-
-    font-size:34px;
+    font-size:26px;
     font-weight:bold;
-
-    padding:35px 15px;
-
+    padding:28px 15px;
     transition:0.2s;
 }
 
-.btn:hover{
+.menu a:hover{
     background:#222;
     border-color:#d4af37;
+    color:white;
+    transform:translateY(-3px);
 }
 
 footer{
     color:#777;
-    padding:30px;
+    padding:25px;
 }
 
 @media(max-width:900px){
+    .hero{
+        margin:20px auto 30px;
+        border-radius:0;
+        border-left:0;
+        border-right:0;
+    }
 
     .menu{
         grid-template-columns:1fr;
     }
-
-    h1{
-        font-size:42px;
-    }
-
-    .subtitle{
-        font-size:20px;
-    }
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-
-<img src="ecuarvelys.png" class="logo">
-
-<h1>Arvelys RP</h1>
-
-<div class="subtitle">
-Serveur SCUM RP francophone
-</div>
-
-</header>
-
 <div class="hero">
-    <img src="arvelys_roleplay_baniere.png" alt="Arvelys RP">
+    <img src="arvelys_roleplay_fr_site.png" alt="Arvelys Roleplay">
 </div>
 
-<div class="menu">
-
-<a href="#" class="btn">Présentation</a>
-
-<a href="#" class="btn">Lore</a>
-
-<a href="#" class="btn">Informations</a>
-
-<a href="#" class="btn">ZDND</a>
-
-<a href="#" class="btn">Règlement</a>
-
-<a href="#" class="btn">Connexion</a>
-
-</div>
+<main class="menu">
+    <a href="presentation.html">Présentation</a>
+    <a href="lore.html">Lore</a>
+    <a href="informations.html">Informations</a>
+    <a href="zdnd.html">ZDND</a>
+    <a href="reglement.html">Règlement</a>
+    <a href="connexion.html">Connexion</a>
+</main>
 
 <footer>
-© Arvelys RP
+    © Arvelys RP
 </footer>
 
 </body>
