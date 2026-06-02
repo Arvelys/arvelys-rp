@@ -7,130 +7,145 @@
 <title>Arvelys RP</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     min-height:100vh;
 
-    background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("carbone_site.png");
+    background-color:#030303;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('carbone_site.png');
+    background-repeat:repeat;
+    background-size:auto;
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
-    font-family:Georgia, serif;
     color:white;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    font-family:Arial, sans-serif;
+    text-align:center;
 }
 
-.banner{
-    margin-top:40px;
+.hero{
+    max-width:1500px;
+    margin:35px auto 55px;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #333;
 }
 
-.banner img{
-    width:970px;
-    max-width:95vw;
-
-    border-radius:12px;
-
-    box-shadow:
-        0 0 20px rgba(0,0,0,0.5);
+.hero img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
 .menu{
-    margin-top:55px;
-
+    max-width:1050px;
+    margin:0 auto 65px;
     display:grid;
-
-    grid-template-columns:
-        repeat(3, auto);
-
-    gap:60px 90px;
-
-    justify-content:center;
-    align-items:center;
+    grid-template-columns:repeat(3, 1fr);
+    gap:32px 45px;
+    padding:0 20px;
 }
 
 .menu a{
+    height:75px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-decoration:none;
 }
 
 .menu img{
-    height:52px;
-    width:auto;
-
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
+    max-width:100%;
+    max-height:64px;
+    object-fit:contain;
+    display:block;
+    transition:0.2s ease;
 }
 
-.menu img:hover{
-    transform:scale(1.05);
+/* Correction fine d'alignement */
+.presentation{ transform:translateY(3px); }
+.lore{ transform:translateY(5px); }
+.informations{ transform:translateY(3px); }
 
-    filter:
-        drop-shadow(0 0 12px rgba(255,215,0,0.90))
-        drop-shadow(0 0 20px rgba(255,215,0,0.60));
+.zdnd{ transform:translateY(5px); }
+.reglement{ transform:translateY(3px); }
+.connexion{ transform:translateY(4px); }
+
+.menu a:hover img{
+    filter:drop-shadow(0 0 14px rgba(212,175,55,0.75));
 }
+
+.menu a:hover .presentation{ transform:translateY(3px) scale(1.06); }
+.menu a:hover .lore{ transform:translateY(3px) scale(1.06); }
+.menu a:hover .informations{ transform:translateY(3px) scale(1.06); }
+
+.menu a:hover .zdnd{ transform:translateY(3px) scale(1.06); }
+.menu a:hover .reglement{ transform:translateY(3px) scale(1.06); }
+.menu a:hover .connexion{ transform:translateY(3px) scale(1.06); }
 
 footer{
-
-    margin-top:90px;
-
-    margin-bottom:25px;
-
-    color:#555;
-
-    font-size:12px;
-
-    text-align:center;
+    color:#777;
+    padding:25px;
+    font-size:14px;
 }
 
+@media(max-width:900px){
+    .hero{
+        margin:20px auto 35px;
+        border-radius:0;
+        border-left:0;
+        border-right:0;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .menu a{
+        height:70px;
+    }
+
+    .menu img{
+        max-height:58px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="banner">
-    <img src="arvelys_roleplay_fr_site.png" alt="Arvelys RP">
+<div class="hero">
+    <img src="arvelys_roleplay_fr_site.png" alt="Arvelys Roleplay">
 </div>
 
-<div class="menu">
+<main class="menu">
 
     <a href="presentation.html">
-        <img src="presentation_site.png" alt="Présentation">
+        <img class="presentation" src="presentation_site.png" alt="Présentation">
     </a>
 
     <a href="lore.html">
-        <img src="lore_site.png" alt="Lore">
+        <img class="lore" src="lore_site.png" alt="Lore">
     </a>
 
     <a href="informations.html">
-        <img src="informations_site.png" alt="Informations">
+        <img class="informations" src="informations_site.png" alt="Informations">
     </a>
 
     <a href="zdnd.html">
-        <img src="zdnd_site.png" alt="ZDND">
+        <img class="zdnd" src="zdnd_site.png" alt="ZDND">
     </a>
 
     <a href="reglement.html">
-        <img src="reglement_site.png" alt="Règlement">
+        <img class="reglement" src="reglement_site.png" alt="Règlement">
     </a>
 
     <a href="connexion.html">
-        <img src="connexion_site.png" alt="Connexion">
+        <img class="connexion" src="connexion_site.png" alt="Connexion">
     </a>
 
-</div>
+</main>
 
 <footer>
     © Arvelys RP
