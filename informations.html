@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Informations - Arvelys RP</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+
+    background-color:#030303;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('carbone_site.png');
+    background-repeat:repeat;
+
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+.page{
+    max-width:1000px;
+    margin:0 auto;
+    padding:60px 20px 30px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:45px;
+    color:#d4af37;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.2s ease;
+}
+
+.back:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+    transform:scale(1.04);
+}
+
+.title{
+    margin:0 0 45px;
+    color:#d4af37;
+    font-size:52px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.35);
+}
+
+.card{
+    background:rgba(10,10,10,0.72);
+    border:1px solid rgba(212,175,55,0.28);
+    border-radius:14px;
+    padding:45px 55px;
+    box-shadow:0 0 30px rgba(0,0,0,0.45);
+}
+
+.card h2{
+    color:#d4af37;
+    font-size:30px;
+    margin:0 0 28px;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.7;
+    margin:0 0 24px;
+}
+
+.info-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 35px;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.info-list strong{
+    color:#d4af37;
+}
+
+.separator{
+    width:140px;
+    height:1px;
+    background:rgba(212,175,55,0.45);
+    margin:38px auto;
+}
+
+footer{
+    color:#444;
+    font-size:12px;
+    text-align:center;
+    margin-top:150px;
+    padding-bottom:25px;
+}
+
+@media(max-width:900px){
+    .page{
+        padding:35px 18px 25px;
+    }
+
+    .title{
+        font-size:38px;
+    }
+
+    .card{
+        padding:30px 24px;
+    }
+
+    .card p,
+    .info-list{
+        font-size:18px;
+    }
+
+    footer{
+        margin-top:90px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+
+    <h1 class="title">Informations</h1>
+
+    <section class="card">
+
+        <h2>Informations générales</h2>
+
+        <ul class="info-list">
+            <li><strong>Nom du serveur :</strong> [FR/QC/BE] Arvelys RolePlay</li>
+            <li><strong>Jeu :</strong> SCUM</li>
+            <li><strong>Langue :</strong> Français</li>
+            <li><strong>Type :</strong> Survie RP immersive</li>
+            <li><strong>Loot :</strong> x1.2</li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <h2>L'esprit du serveur</h2>
+
+        <p>
+            Arvelys RolePlay est un serveur SCUM francophone orienté immersion,
+            survie et jeu de rôle.
+        </p>
+
+        <p>
+            L'objectif n'est pas simplement de survivre, mais de construire une
+            histoire au travers de votre personnage, de vos rencontres et de vos choix.
+        </p>
+
+        <p>
+            La coopération, le commerce, l'exploration, les conflits et la gestion
+            des ressources font partie intégrante de l'expérience.
+        </p>
+
+    </section>
+
+</div>
+
+<footer>
+    © Arvelys RP
+</footer>
+
+</body>
+</html>
