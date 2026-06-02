@@ -10,13 +10,11 @@
 body{
     margin:0;
     min-height:100vh;
-
     background-color:#030303;
     background-image:
         linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url('carbone_site.png');
     background-repeat:repeat;
-
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
@@ -79,6 +77,10 @@ body{
     line-height:1.8;
 }
 
+.card strong{
+    color:#d4af37;
+}
+
 .notice{
     color:#d4af37;
     font-size:22px;
@@ -94,7 +96,6 @@ footer{
 }
 
 @media(max-width:900px){
-
     .page{
         padding:35px 18px 25px;
     }
@@ -127,65 +128,135 @@ footer{
     <h1 class="title">Réglages Serveur</h1>
 
     <section class="card">
-        <h2>⚙️ Gameplay</h2>
-
+        <h2>🌐 Général</h2>
         <ul>
-            <li>Loot : x1.2</li>
-            <li>Épuisement : Activé</li>
-            <li>Micro obligatoire</li>
-            <li>Accès libre (sans whitelist actuellement)</li>
-            <li>Serveur orienté immersion et RolePlay</li>
+            <li><strong>Nom :</strong> [FR/QC/BE] Arvelys RolePlay</li>
+            <li><strong>Style :</strong> RolePlay</li>
+            <li><strong>Joueurs max :</strong> 20</li>
+            <li><strong>Mot de passe :</strong> Aucun</li>
+            <li><strong>Accès :</strong> Libre pour le moment</li>
+            <li><strong>Ping maximum :</strong> 400</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>💰 Économie</h2>
-
+        <h2>🎮 Gameplay</h2>
         <ul>
-            <li>Traders actifs</li>
-            <li>Économie dynamique</li>
-            <li>Vente d'objets autorisée</li>
-            <li>Achat de véhicules selon les stocks disponibles</li>
+            <li><strong>1ère personne :</strong> Activée</li>
+            <li><strong>3ème personne :</strong> Activée</li>
+            <li><strong>Crosshair :</strong> Activé</li>
+            <li><strong>Carte :</strong> Activée</li>
+            <li><strong>Coma :</strong> Activé</li>
+            <li><strong>Cadeaux temporisés :</strong> Désactivés</li>
+            <li><strong>Événements automatiques :</strong> Désactivés</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>🏗️ Construction</h2>
-
+        <h2>💬 Communication</h2>
         <ul>
-            <li>Construction libre</li>
-            <li>Respect des routes obligatoire</li>
-            <li>Respect des accès aux villes, traders et points d'intérêt</li>
-            <li>Les constructions abusives pourront être supprimées</li>
+            <li><strong>Chat global :</strong> Désactivé</li>
+            <li><strong>Chat local :</strong> Désactivé</li>
+            <li><strong>Chat squad :</strong> Désactivé</li>
+            <li><strong>Chat admin :</strong> Activé</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>🌍 Monde</h2>
+        <ul>
+            <li><strong>Zombies / Puppets :</strong> Désactivés</li>
+            <li><strong>NPC humains :</strong> Activés</li>
+            <li><strong>Nombre max NPC :</strong> 45</li>
+            <li><strong>Animaux :</strong> Présents</li>
+            <li><strong>Nombre max animaux :</strong> 65</li>
+            <li><strong>Mechs / Sentries :</strong> Activés</li>
+            <li><strong>Brouillard :</strong> Activé</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>🤖 NPC humains</h2>
+        <ul>
+            <li><strong>Difficulté :</strong> Niveau 1</li>
+            <li><strong>Santé :</strong> x0.9</li>
+            <li><strong>Dégâts :</strong> x0.8</li>
+            <li><strong>Vitesse :</strong> x0.9</li>
+            <li><strong>Chance de drop objet en main :</strong> 50%</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>🛡️ Mechs & dangers</h2>
+        <ul>
+            <li><strong>Santé des sentries :</strong> x0.8</li>
+            <li><strong>Dégâts des sentries :</strong> x0.7</li>
+            <li><strong>Railgun sentry :</strong> x0.5</li>
+            <li><strong>Grenades sentry :</strong> x0.5</li>
+            <li><strong>Dégâts aux bases :</strong> Désactivés pour les sentries</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>🕒 Temps & ambiance</h2>
+        <ul>
+            <li><strong>Heure de départ :</strong> 07:00</li>
+            <li><strong>Vitesse du temps :</strong> x3.84</li>
+            <li><strong>Lever du soleil :</strong> 05:45</li>
+            <li><strong>Coucher du soleil :</strong> 22:30</li>
+            <li><strong>Obscurité nocturne :</strong> 0.6</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>🎒 Loot & progression</h2>
+        <ul>
+            <li><strong>Loot :</strong> x1.2</li>
+            <li><strong>Fame gain :</strong> x2</li>
+            <li><strong>Perte de fame à la mort :</strong> 50%</li>
+            <li><strong>Gain de fame au kill :</strong> Désactivé</li>
+            <li><strong>Protection nouveau joueur :</strong> Activée</li>
+            <li><strong>Durée protection nouveau joueur :</strong> 120 minutes</li>
         </ul>
     </section>
 
     <section class="card">
         <h2>🚗 Véhicules</h2>
-
         <ul>
-            <li>Véhicules conservés lors des redémarrages</li>
-            <li>Nombre volontairement limité</li>
-            <li>Les abus liés à l'accumulation pourront être sanctionnés</li>
+            <li><strong>Carburant moteur :</strong> x0.8</li>
+            <li><strong>Batterie moteur :</strong> x1</li>
+            <li><strong>Batterie appareils :</strong> x0.9</li>
+            <li><strong>Batterie inactivité :</strong> x0.1</li>
+            <li><strong>Inactivité véhicule avant suppression :</strong> 14 jours</li>
+            <li><strong>Véhicules en zones interdites :</strong> 7 jours</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>⚔️ PvP & RP</h2>
-
+        <h2>🏗️ Construction & bases</h2>
         <ul>
-            <li>Le RP est prioritaire hors ZDND</li>
-            <li>Les ZDND ne possèdent aucune règle particulière</li>
-            <li>Le Fair-Play reste attendu de tous les joueurs</li>
+            <li><strong>Construction de base :</strong> Activée</li>
+            <li><strong>Restrictions de construction carte :</strong> Désactivées</li>
+            <li><strong>Restrictions de proximité :</strong> Désactivées</li>
+            <li><strong>Éléments par drapeau :</strong> 200</li>
+            <li><strong>Éléments bonus par membre :</strong> +25</li>
+            <li><strong>Drapeaux multiples par joueur :</strong> Autorisés</li>
+            <li><strong>Dégradation des bases :</strong> Désactivée</li>
+            <li><strong>Raid protection :</strong> Activée</li>
         </ul>
     </section>
 
     <section class="card">
         <h2>🛌 Respawn</h2>
-
         <ul>
-            <li>Respawn selon les mécaniques du jeu</li>
-            <li>Les réglages pourront évoluer selon les besoins du serveur</li>
+            <li><strong>Respawn secteur :</strong> Activé</li>
+            <li><strong>Respawn abri :</strong> Activé</li>
+            <li><strong>Respawn squadmate :</strong> Activé</li>
+            <li><strong>Prix respawn aléatoire :</strong> 1500</li>
+            <li><strong>Prix respawn secteur :</strong> 5000</li>
+            <li><strong>Prix respawn abri :</strong> 3000</li>
+            <li><strong>Prix respawn squad :</strong> 5000</li>
+            <li><strong>Permadeath :</strong> Désactivée</li>
         </ul>
     </section>
 
@@ -193,13 +264,12 @@ footer{
         <h2>⚠️ Important</h2>
 
         <p class="notice">
-            Les réglages du serveur sont susceptibles d'évoluer afin d'améliorer
-            l'expérience de jeu, l'équilibre et l'immersion.
+            Ces réglages sont susceptibles d'évoluer afin d'améliorer l'équilibre,
+            l'immersion et l'expérience de jeu.
         </p>
 
         <p class="notice">
-            Pensez à consulter régulièrement cette page afin de rester informé
-            des éventuelles modifications.
+            Les valeurs affichées ici résument les réglages importants du serveur.
         </p>
     </section>
 
