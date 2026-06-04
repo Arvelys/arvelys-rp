@@ -23,7 +23,7 @@ body{
 }
 
 .page{
-    max-width:1000px;
+    max-width:1600px;
     margin:0 auto;
     padding:60px 20px 30px;
 }
@@ -42,58 +42,75 @@ body{
     transform:scale(1.04);
 }
 
-.title{
-    margin:0 0 45px;
-    color:#d4af37;
-    font-size:52px;
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    text-shadow:0 0 14px rgba(212,175,55,0.35);
-}
-
 .page-banner{
     display:block;
-    width:700px;
-    max-width:95%;
+    width:850px;
+    max-width:90%;
     height:auto;
-    margin:25px auto 30px auto;
-
-    transform:translateX(8px);
+    margin:-40px auto 10px auto;
 }
-    
+
 .card{
     background:rgba(10,10,10,0.72);
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
-    padding:45px 55px;
+
+    width:1100px;
+    max-width:92vw;
+
+    margin:0 auto 28px auto;
+    padding:45px 70px;
+
     box-shadow:0 0 30px rgba(0,0,0,0.45);
+    text-align:center;
+    box-sizing:border-box;
 }
 
 .card h2{
     color:#d4af37;
-    font-size:30px;
-    margin:0 0 32px;
+    font-size:34px;
+    margin:0 0 28px;
+    text-align:center;
+    text-shadow:0 0 12px rgba(212,175,55,0.28);
 }
 
 .card p{
     font-size:20px;
-    line-height:1.75;
-    margin:0 0 28px;
+    line-height:1.85;
+    margin:0 0 22px;
+    text-align:center;
 }
 
-.separator{
-    width:140px;
-    height:1px;
-    background:rgba(212,175,55,0.45);
-    margin:38px auto;
+.card p:last-child{
+    margin-bottom:0;
+}
+
+.lore-image{
+    display:block;
+    width:100%;
+    max-width:900px;
+    height:auto;
+    margin:32px auto 0 auto;
+    border:1px solid rgba(212,175,55,0.28);
+    border-radius:12px;
+    box-shadow:0 0 24px rgba(0,0,0,0.55);
+}
+
+.note-image{
+    color:#777;
+    font-size:14px;
+    margin-top:12px;
+}
+
+.quote-card{
+    border-color:rgba(212,175,55,0.45);
 }
 
 .quote{
     color:#d4af37;
-    font-size:25px;
+    font-size:26px;
     line-height:1.6;
-    margin-top:40px;
+    margin-top:5px;
     text-shadow:0 0 12px rgba(212,175,55,0.35);
 }
 
@@ -105,17 +122,24 @@ footer{
     padding-bottom:25px;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
     .page{
         padding:35px 18px 25px;
     }
 
-    .title{
-        font-size:38px;
+    .page-banner{
+        width:90%;
+        margin:-25px auto 10px auto;
     }
 
     .card{
+        width:95%;
+        max-width:95%;
         padding:30px 24px;
+    }
+
+    .card h2{
+        font-size:27px;
     }
 
     .card p{
@@ -140,11 +164,10 @@ footer{
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
     <img src="lore_site.png"
-      alt="Lore"
-      class="page-banner">
+         alt="Lore"
+         class="page-banner">
 
     <section class="card">
-
         <h2>La fin du monde n'a pas eu lieu.<br>Elle a simplement changé de visage.</h2>
 
         <p>
@@ -158,19 +181,53 @@ footer{
 
         <p>
             Les nations se sont effondrées les unes après les autres. Les gouvernements ont disparu.
-            Les frontières n'existent plus que sur d'anciennes cartes jaunies.
+            Les frontières ne sont plus de simples traits sur d'anciennes cartes jaunies :
+            elles sont devenues physiques, dressées sous forme de murs infranchissables,
+            de zones interdites et de secteurs contrôlés.
         </p>
+
+        <p>
+            Comme si cela ne suffisait pas, chaque citoyen a fini par accepter l'impensable :
+            le port d'une puce implantée chirurgicalement à l'arrière du crâne.
+            Impossible à retirer sans condamner son porteur, elle devait officiellement permettre
+            de suivre les déplacements, d'identifier les survivants et de maintenir un semblant d'ordre.
+        </p>
+
+        <!-- IMAGE OPTIONNELLE POUR CE PARAGRAPHE -->
+        <!-- Pour l'activer : enlève les signes autour de la ligne img ci-dessous et mets ton image dans GitHub -->
+        <!-- <img src="lore_guerre_2032.png" alt="Ruines après la guerre" class="lore-image"> -->
+    </section>
+
+    <section class="card">
+        <h2>Les armes se sont tues.<br>Mais le danger est resté.</h2>
 
         <p>
             Lorsque les derniers tirs se sont finalement tus, il ne restait derrière eux qu'un continent meurtri,
-            des villes en ruines et des millions de vies brisées.
+            des villes éventrées et des millions de vies brisées.
         </p>
-
-        <div class="separator"></div>
 
         <p>
-            Vous êtes l'un des survivants.
+            Dans certaines zones anciennement stratégiques, des robots autonomes continuent de patrouiller.
+            Ils protègent encore des lieux dont plus personne ne connaît vraiment l'importance,
+            prêts à abattre quiconque franchit leur périmètre.
         </p>
+
+        <p>
+            Ces machines semblent garder des fantômes. Pourtant, les fantômes ne larguent pas de caisses depuis le ciel.
+            Parfois, des avions percent encore le silence et abandonnent leur cargaison au milieu des terres mortes.
+        </p>
+
+        <p>
+            Plus inquiétant encore, des hommes armés sont parfois aperçus en train d'ouvrir le feu sur des citoyens désarmés,
+            sans sommation, sans revendication, sans logique apparente.
+        </p>
+
+        <!-- IMAGE OPTIONNELLE POUR CE PARAGRAPHE -->
+        <!-- <img src="lore_robots_zone.png" alt="Zone militaire protégée par des robots" class="lore-image"> -->
+    </section>
+
+    <section class="card">
+        <h2>Vous êtes l'un des survivants.</h2>
 
         <p>
             Quelque part dans l'est de l'Europe, au cœur d'une région oubliée du monde,
@@ -186,24 +243,51 @@ footer{
             ou une menace.
         </p>
 
-        <div class="separator"></div>
+        <!-- IMAGE OPTIONNELLE POUR CE PARAGRAPHE -->
+        <!-- <img src="lore_survivant_route.png" alt="Survivant sur une route abandonnée" class="lore-image"> -->
+    </section>
+
+    <section class="card">
+        <h2>La vie reprend malgré tout.</h2>
 
         <p>
-            Pourtant, au milieu des ruines, la vie reprend peu à peu ses droits.
+            Au milieu des ruines, des communautés se forment.
+            Des commerçants parcourent les routes dangereuses.
+            Des groupes armés tentent d'imposer leurs propres lois.
         </p>
 
         <p>
-            Des communautés se forment. Des commerçants parcourent les routes dangereuses.
-            Des groupes armés tentent d'imposer leurs lois.
+            Certains cherchent à survivre honnêtement. D'autres pillent, trafiquent, mentent ou manipulent.
+            Dans ce nouveau monde, la morale est souvent un luxe que peu peuvent encore s'offrir.
         </p>
 
         <p>
-            Des aventuriers explorent les vestiges du passé à la recherche de ressources,
-            de véhicules et de réponses.
+            Et pourtant, des aventuriers continuent d'explorer les vestiges du passé à la recherche de ressources,
+            de véhicules, d'informations... et peut-être de réponses.
         </p>
 
-        <div class="separator"></div>
+        <!-- IMAGE OPTIONNELLE POUR CE PARAGRAPHE -->
+        <!-- <img src="lore_communaute.png" alt="Campement de survivants" class="lore-image"> -->
+    </section>
 
+    <section class="card">
+        <h2>À quoi tout cela rime ?</h2>
+
+        <p>
+            Les puces servent-elles encore à quelque chose ?
+            Qui contrôle les robots ?
+            Qui organise les largages ?
+            Et pourquoi des hommes armés tirent-ils à vue sur ceux qui n'ont déjà plus rien ?
+        </p>
+
+        <p>
+            Les réponses existent peut-être encore quelque part.
+            Dans un bunker verrouillé. Dans une base abandonnée. Dans la mémoire d'un survivant.
+            Ou dans les mensonges de ceux qui prétendent avoir tout perdu.
+        </p>
+    </section>
+
+    <section class="card quote-card">
         <p>
             Dans ce nouveau monde, votre histoire vous appartient.
         </p>
@@ -217,7 +301,6 @@ footer{
             La guerre est terminée.<br>
             La survie, elle, ne fait que commencer.
         </p>
-
     </section>
 
     <div style="margin-top:60px;">
