@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Humains - Arvelys RP</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+
+    background-color:#030303;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('carbone_site.png');
+    background-repeat:repeat;
+
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+.page{
+    max-width:1500px;
+    margin:0 auto;
+    padding:60px 20px 30px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:45px;
+    color:#d4af37;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.2s ease;
+}
+
+.back:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+    transform:scale(1.04);
+}
+
+.title{
+    margin:-10px 0 35px;
+    color:#d4af37;
+    font-size:64px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 8px rgba(212,175,55,0.55),
+        0 0 18px rgba(212,175,55,0.35);
+}
+
+.human-card{
+    width:1280px;
+    max-width:92vw;
+    margin:0 auto 28px auto;
+    padding:26px 28px;
+
+    background:rgba(10,10,10,0.72);
+    border:1px solid rgba(212,175,55,0.38);
+    border-radius:14px;
+    box-shadow:0 0 30px rgba(0,0,0,0.45);
+
+    box-sizing:border-box;
+}
+
+.human-grid{
+    display:grid;
+    grid-template-columns:1fr 1.18fr;
+    gap:42px;
+    align-items:center;
+}
+
+.human-grid.reverse{
+    grid-template-columns:1.18fr 1fr;
+}
+
+.human-text{
+    text-align:left;
+}
+
+.human-text.center{
+    text-align:center;
+}
+
+.human-text h2{
+    color:#d4af37;
+    font-size:30px;
+    line-height:1.25;
+    margin:0 0 26px;
+    text-align:center;
+    text-shadow:0 0 12px rgba(212,175,55,0.35);
+}
+
+.human-text p{
+    font-size:20px;
+    line-height:1.85;
+    margin:0 0 22px;
+    color:#f2f2f2;
+}
+
+.human-text p:last-child{
+    margin-bottom:0;
+}
+
+.gold{
+    color:#d4af37;
+    font-weight:bold;
+}
+
+.mini-separator{
+    width:90px;
+    height:1px;
+    background:rgba(212,175,55,0.55);
+    margin:24px auto;
+}
+
+.human-image{
+    display:block;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border:1px solid rgba(212,175,55,0.25);
+    border-radius:2px;
+    box-shadow:0 0 24px rgba(0,0,0,0.60);
+}
+
+.character-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:340px;
+    overflow:hidden;
+}
+
+.human-character{
+    display:block;
+    max-height:350px;
+    max-width:92%;
+    height:auto;
+    filter:drop-shadow(0 0 24px rgba(0,0,0,0.90));
+}
+
+.stats{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.stats td{
+    border-bottom:1px solid rgba(212,175,55,0.16);
+    padding:12px 8px;
+    font-size:20px;
+    line-height:1.5;
+}
+
+.stats tr:last-child td{
+    border-bottom:none;
+}
+
+.stats td:first-child{
+    color:#ddd;
+}
+
+.stats td:last-child{
+    color:#d4af37;
+    font-weight:bold;
+    text-align:right;
+}
+
+.warning-card{
+    border-color:rgba(212,175,55,0.50);
+}
+
+.warning{
+    color:#d4af37 !important;
+    font-size:24px !important;
+    line-height:1.6 !important;
+    text-align:center !important;
+    text-shadow:0 0 12px rgba(212,175,55,0.35);
+}
+
+footer{
+    color:#444;
+    font-size:12px;
+    text-align:center;
+    margin-top:150px;
+    padding-bottom:25px;
+}
+
+@media(max-width:1000px){
+    .page{
+        padding:35px 18px 25px;
+    }
+
+    .title{
+        font-size:42px;
+        margin:-5px 0 28px;
+    }
+
+    .human-card{
+        width:95%;
+        max-width:95%;
+        padding:24px;
+    }
+
+    .human-grid,
+    .human-grid.reverse{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    .human-text,
+    .human-text.center{
+        text-align:center;
+    }
+
+    .human-text h2{
+        font-size:27px;
+    }
+
+    .human-text p{
+        font-size:18px;
+        text-align:center;
+    }
+
+    .human-image{
+        height:auto;
+        max-height:360px;
+    }
+
+    .character-box{
+        min-height:0;
+    }
+
+    .human-character{
+        max-height:360px;
+    }
+
+    .stats td{
+        font-size:17px;
+    }
+
+    .warning{
+        font-size:21px !important;
+    }
+
+    footer{
+        margin-top:90px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+
+    <h1 class="title">Humains</h1>
+
+    <section class="human-card">
+        <div class="human-grid">
+            <div class="human-text center">
+                <h2>Tous les monstres<br>ne sont pas des machines.</h2>
+
+                <p>
+                    La guerre n'a pas seulement détruit les villes.
+                    Elle a détruit les lois, les gouvernements et tout ce qui maintenait autrefois les hommes unis.
+                </p>
+
+                <div class="mini-separator"></div>
+
+                <p>
+                    Dix ans après l'effondrement, les routes et les ruines sont encore parcourues
+                    par des groupes humains hostiles.
+                    Ils n'offrent aucune discussion, aucune négociation et aucune scène RP.
+                </p>
+            </div>
+
+            <div class="character-box">
+                <img src="humains_predateur.png"
+                     alt="Humain hostile armé"
+                     class="human-character">
+            </div>
+        </div>
+    </section>
+
+    <section class="human-card">
+        <div class="human-grid reverse">
+            <div class="character-box">
+                <img src="humains_prisonnier.png"
+                     alt="Ancien prisonnier armé"
+                     class="human-character">
+            </div>
+
+            <div class="human-text">
+                <h2>Les anciens prisonniers.</h2>
+
+                <p>
+                    Lorsque les prisons se sont effondrées, des milliers de détenus ont retrouvé leur liberté.
+                    Pour beaucoup, le monde extérieur est devenu une immense zone de chasse.
+                </p>
+
+                <p>
+                    Ils attaquent les inconnus afin de récupérer armes, nourriture, munitions ou équipement.
+                    Chaque voyageur représente un butin potentiel.
+                </p>
+
+                <p>
+                    <span class="gold">Ce sont généralement les moins bien équipés.</span>
+                    Leurs armes sont souvent rudimentaires, récupérées ou en mauvais état.
+                    Ne les sous-estimez pas : leur agressivité compense largement leur manque de matériel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="human-card">
+        <div class="human-grid">
+            <div class="human-text">
+                <h2>Les survivants devenus prédateurs.</h2>
+
+                <p>
+                    Tous les monstres ne sont pas nés criminels.
+                    Certains étaient autrefois de simples civils.
+                    Mais dix années de guerre, de famine et de violence ont fini par les transformer.
+                </p>
+
+                <p>
+                    Ils considèrent les autres survivants comme des concurrents directs pour les ressources encore disponibles.
+                    Ils tirent les premiers afin d'éviter d'être ceux qui tomberont demain.
+                </p>
+
+                <p>
+                    <span class="gold">Leur équipement est moyen, mais létal.</span>
+                    Armes civiles, matériel récupéré, protections improvisées ou pièces militaires trouvées au fil des années :
+                    ils ne sont pas les mieux armés, mais restent extrêmement dangereux.
+                </p>
+            </div>
+
+            <div class="character-box">
+                <img src="humains_predateur.png"
+                     alt="Survivant devenu prédateur"
+                     class="human-character">
+            </div>
+        </div>
+    </section>
+
+    <section class="human-card">
+        <div class="human-grid reverse">
+            <img src="humains_victime.png"
+                 alt="Victime d'une attaque de PNJ humain"
+                 class="human-image">
+
+            <div class="human-text">
+                <h2>Les anciens militaires.</h2>
+
+                <p>
+                    Lorsque les gouvernements se sont effondrés, certains soldats ont refusé de déposer les armes.
+                    Privés de commandement et coupés du reste du monde, ils continuent d'appliquer leurs propres protocoles.
+                </p>
+
+                <p>
+                    Ils considèrent toute présence non autorisée comme une menace.
+                    Quiconque pénètre dans leur secteur devient une cible.
+                    Pour eux, vous n'êtes ni un survivant ni un civil : vous êtes un intrus.
+                </p>
+
+                <p>
+                    <span class="gold">Ce sont les PNJ humains les mieux équipés.</span>
+                    Meilleures armes, protections supérieures, discipline et meilleure efficacité au combat :
+                    ils représentent la menace humaine la plus dangereuse.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="human-card">
+        <div class="human-grid">
+            <div class="human-text">
+                <h2>Paramètres serveur.</h2>
+
+                <p>
+                    Les PNJ humains sont réglés pour rester dangereux sans transformer chaque rencontre
+                    en exécution impossible à éviter.
+                </p>
+
+                <table class="stats">
+                    <tr><td>Difficulté</td><td>Niveau 1</td></tr>
+                    <tr><td>Santé</td><td>x0.9</td></tr>
+                    <tr><td>Dégâts</td><td>x0.8</td></tr>
+                    <tr><td>Vitesse</td><td>x0.9</td></tr>
+                    <tr><td>Chance de drop de l'objet en main</td><td>50%</td></tr>
+                    <tr><td>État maximal de l'objet récupéré</td><td>60%</td></tr>
+                </table>
+            </div>
+
+            <img src="humains_victime.png"
+                 alt="Conséquence d'une attaque"
+                 class="human-image">
+        </div>
+    </section>
+
+    <section class="human-card warning-card">
+        <div class="human-text center">
+            <h2>Ce qu'il faut retenir.</h2>
+
+            <p>
+                Les PNJ humains du serveur sont hostiles.
+                Qu'ils soient d'anciens prisonniers, des survivants devenus prédateurs
+                ou des militaires refusant d'abandonner leur mission, tous partagent un point commun :
+            </p>
+
+            <p class="warning">
+                Ils n'engageront aucune discussion.<br>
+                Ils n'offriront aucune seconde chance.<br>
+                Lorsqu'ils vous repèrent, ils chercheront à vous tuer.
+            </p>
+
+            <p>
+                Dans ce nouveau monde, les machines ne sont pas les seules à avoir oublié ce qu'était la pitié.
+            </p>
+        </div>
+    </section>
+
+    <div style="margin-top:60px;">
+        <a class="back" href="index.html">← Retour à l'accueil</a>
+    </div>
+
+</div>
+
+<footer>
+    © Arvelys RP
+</footer>
+
+</body>
+</html>
