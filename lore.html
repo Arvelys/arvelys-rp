@@ -23,7 +23,7 @@ body{
 }
 
 .page{
-    max-width:1600px;
+    max-width:1500px;
     margin:0 auto;
     padding:60px 20px 30px;
 }
@@ -50,78 +50,119 @@ body{
     margin:-40px auto 10px auto;
 }
 
-.card{
-    background:rgba(10,10,10,0.72);
-    border:1px solid rgba(212,175,55,0.28);
-    border-radius:14px;
-
-    width:1100px;
+.lore-card{
+    width:1280px;
     max-width:92vw;
-
     margin:0 auto 28px auto;
-    padding:45px 70px;
+    padding:26px 28px;
 
+    background:rgba(10,10,10,0.72);
+    border:1px solid rgba(212,175,55,0.38);
+    border-radius:14px;
     box-shadow:0 0 30px rgba(0,0,0,0.45);
-    text-align:center;
+
     box-sizing:border-box;
 }
 
-.card h2{
-    color:#d4af37;
-    font-size:34px;
-    margin:0 0 28px;
-    text-align:center;
-    text-shadow:0 0 12px rgba(212,175,55,0.28);
+.lore-grid{
+    display:grid;
+    grid-template-columns:1fr 1.18fr;
+    gap:42px;
+    align-items:center;
 }
 
-.card p{
+.lore-grid.reverse{
+    grid-template-columns:1.18fr 1fr;
+}
+
+.lore-text{
+    text-align:left;
+}
+
+.lore-text.center{
+    text-align:center;
+}
+
+.lore-text h2{
+    color:#d4af37;
+    font-size:30px;
+    line-height:1.25;
+    margin:0 0 26px;
+    text-align:center;
+    text-shadow:0 0 12px rgba(212,175,55,0.35);
+}
+
+.lore-text p{
+    font-size:20px;
+    line-height:1.85;
+    margin:0 0 22px;
+    color:#f2f2f2;
+}
+
+.lore-text p:last-child{
+    margin-bottom:0;
+}
+
+.gold{
+    color:#d4af37;
+    font-weight:bold;
+}
+
+.mini-separator{
+    width:90px;
+    height:1px;
+    background:rgba(212,175,55,0.55);
+    margin:24px auto;
+}
+
+.lore-image{
+    display:block;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border:1px solid rgba(212,175,55,0.25);
+    border-radius:2px;
+    box-shadow:0 0 24px rgba(0,0,0,0.60);
+}
+
+.image-duo{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    align-items:center;
+}
+
+.image-duo .lore-image{
+    height:280px;
+}
+
+.lore-character{
+    display:block;
+    max-height:350px;
+    max-width:100%;
+    width:auto;
+    height:auto;
+    margin:0 auto;
+    filter:drop-shadow(0 0 24px rgba(0,0,0,0.90));
+}
+
+.quote-card{
+    border-color:rgba(212,175,55,0.48);
+    padding:45px 70px;
+}
+
+.quote-card p{
     font-size:20px;
     line-height:1.85;
     margin:0 0 22px;
     text-align:center;
 }
 
-.card p:last-child{
-    margin-bottom:0;
-}
-
-.lore-image{
-    display:block;
-    width:100%;
-    max-width:930px;
-    height:auto;
-    margin:34px auto 0 auto;
-    border:1px solid rgba(212,175,55,0.30);
-    border-radius:12px;
-    box-shadow:0 0 24px rgba(0,0,0,0.60);
-}
-
-.image-row{
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    gap:38px;
-    margin:35px auto 0 auto;
-    flex-wrap:wrap;
-}
-
-.lore-character{
-    display:block;
-    max-height:520px;
-    max-width:42%;
-    height:auto;
-    filter:drop-shadow(0 0 22px rgba(0,0,0,0.75));
-}
-
-.quote-card{
-    border-color:rgba(212,175,55,0.45);
-}
-
 .quote{
     color:#d4af37;
-    font-size:26px;
-    line-height:1.6;
-    margin-top:5px;
+    font-size:26px !important;
+    line-height:1.6 !important;
+    margin-top:5px !important;
     text-shadow:0 0 12px rgba(212,175,55,0.35);
 }
 
@@ -135,7 +176,7 @@ body{
 .zdnd-link:hover{
     filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
 }
-    
+
 footer{
     color:#444;
     font-size:12px;
@@ -154,27 +195,53 @@ footer{
         margin:-25px auto 10px auto;
     }
 
-    .card{
+    .lore-card{
         width:95%;
         max-width:95%;
-        padding:30px 24px;
+        padding:24px;
     }
 
-    .card h2{
+    .lore-grid,
+    .lore-grid.reverse{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    .lore-text,
+    .lore-text.center{
+        text-align:center;
+    }
+
+    .lore-text h2{
         font-size:27px;
     }
 
-    .card p{
+    .lore-text p,
+    .quote-card p{
         font-size:18px;
+        text-align:center;
+    }
+
+    .lore-image{
+        height:auto;
+        max-height:360px;
+    }
+
+    .image-duo{
+        grid-template-columns:1fr;
+    }
+
+    .image-duo .lore-image{
+        height:auto;
+        max-height:340px;
     }
 
     .lore-character{
-        max-width:75%;
-        max-height:430px;
+        max-height:360px;
     }
 
     .quote{
-        font-size:21px;
+        font-size:21px !important;
     }
 
     footer{
@@ -194,144 +261,379 @@ footer{
          alt="Lore"
          class="page-banner">
 
-    <section class="card">
-        <h2>La fin du monde n'a pas eu lieu.<br>Elle a simplement changé de visage.</h2>
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text center">
+                <h2>La fin du monde</h2>
 
-        <p>
-            Nous sommes en <strong>2032</strong>.
-        </p>
+                <p>
+                    La fin du monde n’a pas eu lieu.<br>
+                    Elle a simplement changé de visage.
+                </p>
 
-        <p>
-            Dix années se sont écoulées depuis le début de la <strong>Troisième Guerre mondiale</strong>,
-            un conflit qui a embrasé la planète entière et détruit tout ce que l'humanité croyait immuable.
-        </p>
+                <p>
+                    <strong>Nous sommes en 2032.</strong>
+                </p>
 
-        <p>
-            Les nations se sont effondrées les unes après les autres. Les gouvernements ont disparu.
-            Les frontières ne sont plus de simples traits sur d'anciennes cartes jaunies :
-            elles sont devenues physiques, dressées sous forme de murs infranchissables,
-            de zones interdites et de secteurs contrôlés.
-        </p>
+                <div class="mini-separator"></div>
 
-        <p>
-            Comme si cela ne suffisait pas, chaque citoyen a fini par accepter l'impensable :
-            le port d'une puce implantée chirurgicalement à l'arrière du crâne.
-            Impossible à retirer sans condamner son porteur, elle devait officiellement permettre
-            de suivre les déplacements, d'identifier les survivants et de maintenir un semblant d'ordre.
-        </p>
+                <p>
+                    Dix années se sont écoulées depuis le début de la <span class="gold">Troisième Guerre mondiale</span>,
+                    un conflit qui a embrasé la planète entière et détruit tout ce que l’humanité croyait immuable.
+                </p>
+            </div>
 
-        <img src="lore_mur_chapitre1.png"
-             alt="Mur frontalier au coucher du soleil"
-             class="lore-image">
-    </section>
-
-    <section class="card">
-        <h2>Les armes se sont tues.<br>Mais le danger est resté.</h2>
-
-        <p>
-            Lorsque les derniers tirs se sont finalement tus, il ne restait derrière eux qu'un continent meurtri,
-            des villes éventrées et des millions de vies brisées.
-        </p>
-
-        <p>
-            Dans certaines zones anciennement stratégiques, des robots autonomes continuent de patrouiller.
-            Ils protègent encore des lieux dont plus personne ne connaît vraiment l'importance,
-            prêts à abattre quiconque franchit leur périmètre.
-        </p>
-
-        <p>
-            Ces machines semblent garder des fantômes. Pourtant, les fantômes ne larguent pas de caisses depuis le ciel.
-            Parfois, des avions percent encore le silence et abandonnent leur cargaison au milieu des terres mortes.
-        </p>
-
-        <img src="lore_robot_chapitre2.png"
-             alt="Robot autonome dans une zone stratégique"
-             class="lore-image">
-    </section>
-
-    <section class="card">
-        <h2>Vous êtes l'un des survivants.</h2>
-
-        <p>
-            Quelque part dans l'est de l'Europe, au cœur d'une région oubliée du monde,
-            vous tentez de reconstruire une existence au milieu des vestiges d'une civilisation disparue.
-        </p>
-
-        <p>
-            Certains <a href="humains.html" class="zdnd-link">humains</a>
-            seront là pour vous aider, d'autres pour vous tuer.
-        </p>
-
-        <p>
-            Chaque balle compte. Chaque repas est précieux. Chaque rencontre peut devenir une alliance...
-            ou une menace.
-        </p>
-
-        <div class="image-row">
-            <img src="lore_survivant_chapitre3.png"
-                 alt="Survivant civil"
-                 class="lore-character">
-            <img src="lore_bandit_chapitre4.png"
-                 alt="Homme armé masqué"
-                 class="lore-character">
+            <img src="lore_ruine1.png"
+                 alt="Ruines après la guerre"
+                 class="lore-image">
         </div>
     </section>
 
-    <section class="card">
-        <h2>La vie reprend malgré tout.</h2>
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <img src="lore_mur.png"
+                 alt="Frontière devenue physique"
+                 class="lore-image">
 
-        <p>
-            Au milieu des ruines, des communautés se forment.
-            Des commerçants parcourent les routes dangereuses.
-            Des groupes armés tentent d'imposer leurs propres lois.
-        </p>
+            <div class="lore-text">
+                <p>
+                    Les nations se sont effondrées les unes après les autres.<br>
+                    Les gouvernements ont disparu.
+                </p>
 
-        <p>
-            Certains cherchent à survivre honnêtement. D'autres pillent, trafiquent, mentent ou manipulent.
-            Dans ce nouveau monde, la morale est souvent un luxe que peu peuvent encore s'offrir.
-        </p>
-
-        <p>
-            Et pourtant, des aventuriers continuent d'explorer les vestiges du passé à la recherche de ressources,
-            de véhicules, d'informations... et peut-être de réponses.
-        </p>
-
-        <img src="lore_mur_final.png"
-             alt="Mur abandonné dans un monde en ruine"
-             class="lore-image">
+                <p>
+                    Les frontières ne sont plus de simples traits tracés sur d’anciennes cartes jaunies.<br>
+                    Elles sont devenues physiques.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section class="card">
-        <h2>À quoi tout cela rime ?</h2>
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text center">
+                <p>
+                    Des lignes de béton et d’acier infranchissables dressées au milieu des terres.
+                </p>
+            </div>
 
-        <p>
-            Les puces servent-elles encore à quelque chose ?
-            Qui contrôle les robots ?
-            Qui organise les largages ?
-            Et pourquoi des hommes armés tirent-ils à vue sur ceux qui n'ont déjà plus rien ?
-        </p>
-
-        <p>
-            Les réponses existent peut-être encore quelque part.
-            Dans un bunker verrouillé. Dans une base abandonnée. Dans la mémoire d'un survivant.
-            Ou dans les mensonges de ceux qui prétendent avoir tout perdu.
-        </p>
+            <img src="lore_mur2.png"
+                 alt="Mur infranchissable"
+                 class="lore-image">
+        </div>
     </section>
 
-    <section class="card quote-card">
-        <p>
-            Dans ce nouveau monde, votre histoire vous appartient.
-        </p>
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <img src="lore_puce.png"
+                 alt="Puce implantée"
+                 class="lore-image">
 
-        <p>
-            Serez-vous un simple survivant ? Un marchand influent ? Un chef de faction ?
-            Un bandit redouté ? Ou celui qui contribuera à rebâtir ce qui a été perdu ?
-        </p>
+            <div class="lore-text">
+                <p>
+                    Pendant la guerre, chaque citoyen a dû se résoudre à accepter l’impensable :<br>
+                    le port d’une puce implantée chirurgicalement à l’arrière du crâne.
+                </p>
 
-        <p class="quote">
-            La guerre est terminée.<br>
-            La survie, elle, ne fait que commencer.
-        </p>
+                <p>
+                    Impossible à retirer sans condamner son porteur, elle devait officiellement permettre
+                    de suivre les déplacements, compter les survivants, identifier les citoyens et maintenir un semblant d’ordre.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text center">
+                <h2>Le silence</h2>
+
+                <p>
+                    Lorsque les derniers tirs se sont finalement tus, il ne restait derrière eux qu’un continent meurtri,
+                    des villes éventrées et des millions de vies brisées.
+                </p>
+            </div>
+
+            <img src="lore_ruine2.png"
+                 alt="Ville éventrée"
+                 class="lore-image">
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <div class="image-duo">
+                <img src="lore_zone_de_non_droit3.png"
+                     alt="Zone stratégique"
+                     class="lore-image">
+                <img src="lore_zone_de_non_droit.png"
+                     alt="Zone de non droit"
+                     class="lore-image">
+            </div>
+
+            <div class="lore-text">
+                <p>
+                    Dans certaines zones anciennement stratégiques, des robots autonomes continuent de patrouiller.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text">
+                <p>
+                    Ils protègent encore des lieux dont plus personne ne connaît vraiment l’importance,
+                    prêts à abattre quiconque franchit leur périmètre.
+                </p>
+            </div>
+
+            <div class="image-duo">
+                <img src="lore_zone_de_non_droit2.png"
+                     alt="Secteur contrôlé"
+                     class="lore-image">
+                <img src="lore_zone_de_non_droit3.png"
+                     alt="Patrouille robotisée"
+                     class="lore-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <img src="lore_largage1.png"
+                 alt="Largage aérien"
+                 class="lore-image">
+
+            <div class="lore-text">
+                <p>
+                    Ces machines semblent garder des fantômes.<br>
+                    Pourtant, les fantômes ne larguent pas de caisses depuis le ciel.
+                </p>
+
+                <p>
+                    Parfois, des avions percent encore le silence…
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text">
+                <p>
+                    …et abandonnent leur cargaison au milieu des terres, provoquant souvent des rencontres
+                    aussi précieuses que dangereuses.
+                </p>
+            </div>
+
+            <img src="lore_largage2.png"
+                 alt="Cargaison abandonnée"
+                 class="lore-image">
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <img src="lore_survivant1.png"
+                 alt="Survivant"
+                 class="lore-character">
+
+            <div class="lore-text center">
+                <h2>Vous êtes l’un des survivants.</h2>
+
+                <p>
+                    Quelque part dans l’est de l’Europe, au cœur d’une région oubliée du monde,
+                    vous tentez de reconstruire une existence au milieu des vestiges d’une civilisation disparue.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text">
+                <p>
+                    Certains croiseront votre route pour échanger, aider ou survivre à vos côtés.<br>
+                    D’autres <a href="humains.html" class="zdnd-link">humains</a> ne seront là que pour vous tuer.
+                </p>
+
+                <p>
+                    Chaque balle compte.<br>
+                    Chaque repas est précieux.<br>
+                    Chaque rencontre, chaque échange, chaque décision peut réellement changer votre destin.
+                </p>
+            </div>
+
+            <div class="image-duo">
+                <img src="lore_chalet.png"
+                     alt="Refuge de survivants"
+                     class="lore-image">
+                <img src="lore_survivant3.png"
+                     alt="Survivant armé"
+                     class="lore-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="image-duo">
+            <img src="lore_rencontre1.png"
+                 alt="Rencontre entre survivants"
+                 class="lore-image">
+            <img src="lore_rencontre2.png"
+                 alt="Échange dangereux"
+                 class="lore-image">
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text center">
+                <h2>La vie reprend malgré tout</h2>
+
+                <p>
+                    Au milieu des ruines, des communautés se forment.<br>
+                    Des commerçants parcourent les routes dangereuses.<br>
+                    Des groupes armés tentent d’imposer leurs propres lois.
+                </p>
+            </div>
+
+            <div class="image-duo">
+                <img src="lore_commercant.png"
+                     alt="Commerçant"
+                     class="lore-image">
+                <img src="lore_commercants2.png"
+                     alt="Commerce dans les ruines"
+                     class="lore-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <div class="image-duo">
+                <img src="lore_bandit.png"
+                     alt="Bandit"
+                     class="lore-image">
+                <img src="lore_bandit2.png"
+                     alt="Prédateur humain"
+                     class="lore-image">
+            </div>
+
+            <div class="lore-text">
+                <p>
+                    Certains cherchent à survivre honnêtement.<br>
+                    D’autres pillent, trafiquent, mentent ou manipulent.
+                </p>
+
+                <p>
+                    Dans ce nouveau monde, la morale est souvent un luxe que peu peuvent encore s’offrir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text">
+                <p>
+                    Et pourtant, des aventuriers continuent d’explorer les vestiges du passé à la recherche
+                    de ressources, de véhicules, d’informations… et peut-être de réponses.
+                </p>
+            </div>
+
+            <img src="lore_chateau.png"
+                 alt="Vestige du passé"
+                 class="lore-image">
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid reverse">
+            <img src="lore_robot.png"
+                 alt="Robot autonome"
+                 class="lore-image">
+
+            <div class="lore-text">
+                <h2>À quoi tout cela rime ?</h2>
+
+                <p>
+                    Les puces servent-elles encore à quelque chose ?
+                </p>
+
+                <p>
+                    Qui contrôle les robots ?
+                </p>
+
+                <p>
+                    Qui organise les largages ?
+                </p>
+
+                <p>
+                    Et pourquoi des hommes armés tirent-ils à vue sur ceux qui n’ont déjà plus rien ?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lore-card">
+        <div class="lore-grid">
+            <div class="lore-text">
+                <p>
+                    Les réponses existent peut-être encore quelque part.
+                </p>
+
+                <p>
+                    Dans un bunker verrouillé.
+                </p>
+
+                <p>
+                    Dans une base abandonnée.
+                </p>
+
+                <p>
+                    Dans la mémoire d’un survivant…<br>
+                    qui n’en est peut-être déjà plus vraiment un.
+                </p>
+            </div>
+
+            <img src="lore_chateau.png"
+                 alt="Lieu oublié"
+                 class="lore-image">
+        </div>
+    </section>
+
+    <section class="lore-card quote-card">
+        <div class="lore-grid">
+            <div class="lore-text center">
+                <h2>Votre histoire commence</h2>
+
+                <p>
+                    Dans ce nouveau monde, votre histoire vous appartient.
+                </p>
+
+                <p>
+                    Serez-vous un simple survivant ?<br>
+                    Un marchand influent ?<br>
+                    Un chef de faction ?<br>
+                    Un bandit redouté ?
+                </p>
+
+                <p>
+                    Ou celui qui contribuera à rebâtir ce qui a été perdu ?
+                </p>
+
+                <p class="quote">
+                    La guerre est terminée.<br>
+                    La survie, elle, ne fait que commencer.
+                </p>
+            </div>
+
+            <img src="lore_route.png"
+                 alt="Route vers l'inconnu"
+                 class="lore-image">
+        </div>
     </section>
 
     <div style="margin-top:60px;">
