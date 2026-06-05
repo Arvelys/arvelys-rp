@@ -10,18 +10,20 @@
 body{
     margin:0;
     min-height:100vh;
+
     background-color:#030303;
     background-image:
         linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url('carbone_site.png');
     background-repeat:repeat;
+
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
 }
 
 .page{
-    max-width:1000px;
+    max-width:1120px;
     margin:0 auto;
     padding:60px 20px 30px;
 }
@@ -50,21 +52,59 @@ body{
     text-shadow:0 0 14px rgba(212,175,55,0.35);
 }
 
-.card{
+.hero{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(212,175,55,0.32);
+    border-radius:18px;
+    margin:0 auto 35px;
+    box-shadow:0 0 36px rgba(0,0,0,0.62);
+    background:rgba(10,10,10,0.72);
+}
+
+.hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.02));
+    pointer-events:none;
+}
+
+.card,
+.largage-section{
     background:rgba(10,10,10,0.72);
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
-    padding:45px 55px;
     box-shadow:0 0 30px rgba(0,0,0,0.45);
 }
 
-.card p{
+.card{
+    padding:45px 55px;
+    margin-top:35px;
+}
+
+.card h2,
+.largage-text h2{
+    color:#d4af37;
+    font-size:30px;
+    margin:0 0 28px;
+}
+
+.card p,
+.largage-text p{
     font-size:20px;
     line-height:1.7;
     margin:0 0 24px;
 }
 
-.card p:last-child{
+.card p:last-child,
+.largage-text p:last-child{
     margin-bottom:0;
 }
 
@@ -77,6 +117,78 @@ body{
 
 .zdnd-link:hover{
     filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+}
+
+.section-title{
+    margin:70px 0 28px;
+    color:#d4af37;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.28);
+}
+
+.largage-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:34px;
+    align-items:center;
+    margin-top:24px;
+    padding:28px;
+    text-align:left;
+}
+
+.largage-section.reverse .largage-image{
+    order:2;
+}
+
+.largage-section.reverse .largage-text{
+    order:1;
+}
+
+.largage-image{
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,0.20);
+    box-shadow:0 0 24px rgba(0,0,0,0.55);
+    background:#050505;
+}
+
+.largage-image img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    filter:contrast(1.04) saturate(0.96);
+}
+
+.largage-text{
+    padding:10px 18px;
+}
+
+.largage-text h2{
+    text-align:left;
+    margin-bottom:18px;
+}
+
+.tag{
+    display:inline-block;
+    color:#ff8800;
+    font-weight:bold;
+    font-size:16px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    text-shadow:0 0 8px rgba(255,136,0,0.35);
+}
+
+.warning{
+    color:#d4af37;
+    font-style:italic;
+    font-size:23px !important;
+    text-shadow:0 0 12px rgba(212,175,55,0.22);
 }
 
 footer{
@@ -100,8 +212,29 @@ footer{
         padding:30px 24px;
     }
 
-    .card p{
+    .card p,
+    .largage-text p{
         font-size:18px;
+    }
+
+    .largage-section,
+    .largage-section.reverse{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:22px;
+    }
+
+    .largage-section.reverse .largage-image,
+    .largage-section.reverse .largage-text{
+        order:initial;
+    }
+
+    .largage-text h2{
+        text-align:center;
+    }
+
+    .largage-image img{
+        height:240px;
     }
 
     footer{
@@ -119,7 +252,13 @@ footer{
 
     <h1 class="title">Largages</h1>
 
+    <div class="hero">
+        <img src="lore_largage2.png" alt="Un survivant observe un largage aérien dans le ciel d'Arvelys RP">
+    </div>
+
     <section class="card">
+
+        <h2>Une cargaison tombée du ciel</h2>
 
         <p>
             De temps à autre, le ciel d'Arvelys RP se fend du bruit d'un appareil inconnu.
@@ -132,27 +271,55 @@ footer{
             plus de dix ans après la guerre.
         </p>
 
-        <p>
-            Sur Arvelys RP, un largage est susceptible d'apparaître environ toutes les <strong>3 heures</strong>.
-            Une fois repéré, le conteneur met encore près de <strong>2 minutes</strong> à atteindre le sol
-            avant de pouvoir être récupéré.
-        </p>
+    </section>
 
-        <p>
-            Ces cargaisons ne restent pas éternellement accessibles. Après environ <strong>25 minutes</strong>,
-            le conteneur s'autodétruit. Son contenu est alors définitivement perdu. Toute personne se trouvant
-            encore dans un rayon de <strong>100 mètres</strong> risque de connaître le même sort.
-        </p>
+    <section class="largage-section">
+        <div class="largage-image">
+            <img src="lore_largage1.png" alt="Conteneur de largage TEC1 au sol">
+        </div>
 
-        <p>
-            Leur autodestruction est peut-être un moyen de ne laisser aucune trace... ou de s'assurer que personne
-            ne découvre ce qu'elles transportaient réellement.
-        </p>
+        <div class="largage-text">
+            <span class="tag">Réglages serveur</span>
+            <h2>Temps, risques et récupération</h2>
 
-        <p>
-            Dans le même temps, le danger vient principalement des autres survivants qui pourraient avoir eu
-            la même idée que vous.
-        </p>
+            <p>
+                Sur Arvelys RP, un largage est susceptible d'apparaître environ toutes les <strong>3 heures</strong>.
+                Une fois repéré, le conteneur met encore près de <strong>2 minutes</strong> à atteindre le sol
+                avant de pouvoir être récupéré.
+            </p>
+
+            <p>
+                Ces cargaisons ne restent pas éternellement accessibles. Après environ <strong>25 minutes</strong>,
+                le conteneur s'autodétruit. Son contenu est alors définitivement perdu. Toute personne se trouvant
+                encore dans un rayon de <strong>100 mètres</strong> risque de connaître le même sort.
+            </p>
+        </div>
+    </section>
+
+    <section class="largage-section reverse">
+        <div class="largage-image">
+            <img src="lore_largage2.png" alt="Largage aérien observé depuis le sol">
+        </div>
+
+        <div class="largage-text">
+            <span class="tag">Mystère militaire</span>
+            <h2>Ne laisser aucune trace</h2>
+
+            <p>
+                Leur autodestruction est peut-être un moyen de ne laisser aucune trace... ou de s'assurer que personne
+                ne découvre ce qu'elles transportaient réellement.
+            </p>
+
+            <p>
+                Dans le même temps, le danger vient principalement des autres survivants qui pourraient avoir eu
+                la même idée que vous.
+            </p>
+        </div>
+    </section>
+
+    <section class="card">
+
+        <h2>Une opportunité dangereuse</h2>
 
         <p>
             Un largage est visible de loin, convoité par beaucoup et ignoré par très peu. Certains viendront
@@ -166,11 +333,11 @@ footer{
             à aller pour mettre la main sur son contenu.
         </p>
 
-        <p>
+        <p class="warning">
             Un largage peut changer votre journée.
         </p>
 
-        <p>
+        <p class="warning">
             Ou y mettre fin.
         </p>
 
