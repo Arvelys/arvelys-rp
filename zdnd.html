@@ -203,6 +203,64 @@ footer{
     padding-bottom:25px;
 }
 
+.page-title{
+    text-align:center;
+    margin:10px 0 45px;
+}
+
+.page-title span{
+    position:relative;
+    display:inline-block;
+    color:#d4af37;
+    font-size:72px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 6px rgba(255,210,90,0.75),
+        0 0 18px rgba(212,175,55,0.55),
+        0 0 32px rgba(180,100,20,0.35);
+}
+
+.page-title span::before,
+.page-title span::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:220px;
+    height:2px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        #d4af37,
+        transparent
+    );
+    box-shadow:0 0 12px rgba(212,175,55,0.8);
+}
+
+.page-title span::before{
+    right:100%;
+    margin-right:25px;
+}
+
+.page-title span::after{
+    left:100%;
+    margin-left:25px;
+}
+
+@media(max-width:900px){
+
+    .page-title span{
+        font-size:42px;
+    }
+
+    .page-title span::before,
+    .page-title span::after{
+        width:70px;
+    }
+
+}
+    
 @media(max-width:900px){
     .page{
         padding:35px 18px 25px;
@@ -255,7 +313,7 @@ footer{
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
 <div class="page-title">
-    <span>ZDND</span>
+    <span>ZONES DE NON DROIT</span>
 </div>
     <section class="card">
         <h2>⚠️ Zones de Non Droit</h2>
