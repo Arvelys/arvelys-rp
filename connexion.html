@@ -42,22 +42,49 @@ body{
     transform:scale(1.04);
 }
 
-.title{
+.page-title{
+    text-align:center;
     margin:0 0 45px;
-    color:#d4af37;
-    font-size:52px;
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    text-shadow:0 0 14px rgba(212,175,55,0.35);
 }
 
-.page-banner{
-    display:block;
-    width:850px;
-    max-width:90%;
-    height:auto;
-    margin:20px auto 20px auto;
+.page-title span{
+    position:relative;
+    display:inline-block;
+    color:#d4af37;
+    font-size:92px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 6px rgba(255,210,90,0.75),
+        0 0 18px rgba(212,175,55,0.55),
+        0 0 32px rgba(180,100,20,0.35);
+}
+
+.page-title span::before,
+.page-title span::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:300px;
+    height:2px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        #d4af37,
+        transparent
+    );
+    box-shadow:0 0 12px rgba(212,175,55,0.8);
+}
+
+.page-title span::before{
+    right:100%;
+    margin-right:25px;
+}
+
+.page-title span::after{
+    left:100%;
+    margin-left:25px;
 }
     
 .card{
@@ -130,6 +157,14 @@ footer{
     footer{
         margin-top:90px;
     }
+    .page-title span{
+    font-size:42px;
+    }
+
+    .page-title span::before,
+    .page-title span::after{
+    width:70px;
+    }
 }
 </style>
 </head>
@@ -140,9 +175,9 @@ footer{
 
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
-    <img src="connexion_site.png"
-     alt="Connexion"
-     class="page-banner">
+    <div class="page-title">
+        <span>CONNEXION</span>
+    </div>
 
     <section class="card">
 
