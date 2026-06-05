@@ -10,20 +10,18 @@
 body{
     margin:0;
     min-height:100vh;
-
     background-color:#030303;
     background-image:
         linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url('carbone_site.png');
     background-repeat:repeat;
-
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
 }
 
 .page{
-    max-width:1200px;
+    max-width:1120px;
     margin:0 auto;
     padding:60px 20px 30px;
 }
@@ -42,40 +40,70 @@ body{
     transform:scale(1.04);
 }
 
-.page-banner{
-    display:block;
-    width:850px;
-    max-width:90%;
+.title{
+    margin:0 0 45px;
+    color:#d4af37;
+    font-size:52px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.35);
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(212,175,55,0.32);
+    border-radius:18px;
+    margin:0 auto 35px;
+    box-shadow:0 0 36px rgba(0,0,0,0.62);
+    background:rgba(10,10,10,0.72);
+}
+
+.hero img{
+    width:100%;
     height:auto;
-    margin:20px auto 10px auto;
+    display:block;
 }
 
-.subtitle{
-    margin-top:15px;
-    color:#c9c9c9;
-    font-size:20px;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.02));
+    pointer-events:none;
 }
 
-.card{
-    margin-top:50px;
+.card,
+.zdnd-section{
     background:rgba(10,10,10,0.72);
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
-    padding:50px;
-    text-align:center;
-    max-width:900px;
-    margin:50px auto 0 auto;
+    box-shadow:0 0 30px rgba(0,0,0,0.45);
 }
 
-.card h2{
+.card{
+    padding:45px 55px;
+    margin-top:35px;
+}
+
+.card h2,
+.zdnd-text h2{
     color:#d4af37;
-    margin-bottom:20px;
+    font-size:30px;
+    margin:0 0 28px;
 }
 
-.card p{
-    font-size:18px;
-    line-height:1.8;
-    color:#e0e0e0;
+.card p,
+.zdnd-text p{
+    font-size:20px;
+    line-height:1.7;
+    margin:0 0 24px;
+}
+
+.card p:last-child,
+.zdnd-text p:last-child{
+    margin-bottom:0;
 }
 
 .card ul{
@@ -103,25 +131,78 @@ body{
     filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
 }
 
-.zdnd-image{
-    width:100%;
-    max-width:1000px;
-    border:1px solid rgba(212,175,55,0.30);
-    border-radius:10px;
-    margin-bottom:25px;
-}
-
-.card p.warning{
+.warning{
     color:#ff8800;
-    font-size:28px;
+    font-size:26px !important;
     font-weight:bold;
     text-align:center;
-    text-shadow:
-        0 0 8px rgba(255,136,0,0.45),
-        0 0 16px rgba(255,136,0,0.25);
-    margin-top:15px;
+    text-shadow:0 0 8px rgba(255,136,0,0.45), 0 0 16px rgba(255,136,0,0.25);
+    margin-top:20px !important;
 }
-    
+
+.section-title{
+    margin:70px 0 28px;
+    color:#d4af37;
+    font-size:34px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.28);
+}
+
+.zdnd-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:34px;
+    align-items:center;
+    margin-top:24px;
+    padding:28px;
+    text-align:left;
+}
+
+.zdnd-section.reverse .zdnd-image{
+    order:2;
+}
+
+.zdnd-section.reverse .zdnd-text{
+    order:1;
+}
+
+.zdnd-image{
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,0.20);
+    box-shadow:0 0 24px rgba(0,0,0,0.55);
+}
+
+.zdnd-image img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    display:block;
+    filter:contrast(1.04) saturate(0.96);
+}
+
+.zdnd-text{
+    padding:10px 18px;
+}
+
+.zdnd-text h2{
+    text-align:left;
+    margin-bottom:18px;
+}
+
+.tag{
+    display:inline-block;
+    color:#ff8800;
+    font-weight:bold;
+    font-size:16px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    text-shadow:0 0 8px rgba(255,136,0,0.35);
+}
+
 footer{
     color:#444;
     font-size:12px;
@@ -131,18 +212,45 @@ footer{
 }
 
 @media(max-width:900px){
+    .page{
+        padding:35px 18px 25px;
+    }
 
-    .subtitle{
-        font-size:18px;
+    .title{
+        font-size:38px;
     }
 
     .card{
-        padding:30px;
+        padding:30px 24px;
     }
 
     .card p,
+    .zdnd-text p{
+        font-size:18px;
+    }
+
     .card li{
         font-size:16px;
+    }
+
+    .zdnd-section,
+    .zdnd-section.reverse{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:22px;
+    }
+
+    .zdnd-section.reverse .zdnd-image,
+    .zdnd-section.reverse .zdnd-text{
+        order:initial;
+    }
+
+    .zdnd-text h2{
+        text-align:center;
+    }
+
+    .zdnd-image img{
+        height:240px;
     }
 }
 </style>
@@ -154,30 +262,43 @@ footer{
 
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
-    <img src="zdnd_site.png"
-         alt="Zones de Non Droit"
-         class="page-banner">
+    <h1 class="title">ZDND</h1>
 
-    <div class="card">
+    <div class="hero">
+        <img src="zdnd_map.png" alt="Carte des Zones de Non Droit d'Arvelys RP">
+    </div>
 
-        <h2>⚠️ Zones de Non Droit (ZDND)</h2>
+    <section class="card">
+        <h2>⚠️ Zones de Non Droit</h2>
 
-        <br>
-        
         <p>
-            Comme indiqué dans le
-            <a href="reglement.html" class="zdnd-link">Règlement du serveur</a>,
-            les Zones de Non Droit (ZDND) sont des secteurs où les règles habituelles
-            liées aux agressions et aux affrontements ne s'appliquent plus.
+            Les <a href="zdnd.html" class="zdnd-link">Zones de Non Droit</a> correspondent à d'anciennes installations stratégiques,
+            militaires ou industrielles abandonnées après la Troisième Guerre mondiale.
+        </p>
+
+        <p>
+            Les <a href="sentinelles.html" class="zdnd-link">Sentinelles</a> continuent parfois de protéger certains secteurs
+            dont plus personne ne connaît réellement l'importance.
+        </p>
+
+        <p>
+            Richesses, secrets et dangers s'y côtoient. Aucun survivant ne peut prétendre savoir ce qui s'y cache encore.
+            Certaines réponses pourraient pourtant s'y trouver... pour ceux prêts à prendre le risque.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>📜 Règles applicables</h2>
+
+        <p>
+            Comme indiqué dans le <a href="reglement.html" class="zdnd-link">Règlement du serveur</a>,
+            les ZDND sont des secteurs où les règles habituelles liées aux agressions et aux affrontements
+            ne s'appliquent plus.
         </p>
 
         <p>
             Entrer dans une ZDND revient à accepter les risques qui y sont associés.
         </p>
-
-        <br>
-
-        <h2>📜 Règles applicables</h2>
 
         <ul>
             <li>Le RolePlay reste obligatoire dès lors qu'une interaction a lieu entre joueurs.</li>
@@ -187,8 +308,12 @@ footer{
             <li>Les véhicules présents dans une ZDND peuvent également être volés ou récupérés.</li>
         </ul>
 
-        <br>
+        <p class="warning">
+            Soyez vigilants et considérez ces secteurs comme des zones hostiles.
+        </p>
+    </section>
 
+    <section class="card">
         <h2>⚠️ Important</h2>
 
         <p>
@@ -200,26 +325,152 @@ footer{
             <li>Tous les secteurs protégés par des <a href="sentinelles.html" class="zdnd-link">Sentinelles</a>.</li>
             <li>Tous les bunkers, qu'ils soient actifs, abandonnés ou non.</li>
         </ul>
+    </section>
 
-        <br>
-        
-        <p class="warning">
-        Soyez vigilants et considérez ces secteurs comme des zones hostiles.
-        </p>
+    <h2 class="section-title">Les secteurs connus</h2>
 
-        <br>
+    <section class="zdnd-section">
+        <div class="zdnd-image">
+            <img src="zdnd_ancienne_zone_aerienne.png" alt="Ancienne zone aérienne">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>🛩️ Ancienne zone aérienne</h2>
+            <p>
+                Cette ancienne installation aérienne fut l'un des points militaires majeurs de la région.
+                Les pistes, hangars et zones de contrôle ont été abandonnés dans le chaos des derniers jours.
+            </p>
+            <p>
+                Aujourd'hui, le secteur attire les survivants en quête de matériel, mais également ceux qui savent
+                qu'un lieu stratégique ne reste jamais totalement désert.
+            </p>
+        </div>
+    </section>
 
-    </div>
+    <section class="zdnd-section reverse">
+        <div class="zdnd-image">
+            <img src="zdnd_complexe_radar.png" alt="Complexe Radar de l'Est">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>🛰️ Complexe Radar de l'Est</h2>
+            <p>
+                Perché au sommet des collines, ce complexe assurait autrefois la surveillance aérienne de toute la région.
+                Les antennes sont aujourd'hui silencieuses.
+            </p>
+            <p>
+                Du moins en apparence. Certains survivants prétendent encore capter d'étranges signaux à proximité du site.
+                D'autres affirment que les Sentinelles qui patrouillent aux alentours ne le font pas par hasard.
+            </p>
+        </div>
+    </section>
+
+    <section class="zdnd-section">
+        <div class="zdnd-image">
+            <img src="zdnd_zone_industrielle_est.png" alt="Zone Industrielle de l'Est">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>🏭 Zone Industrielle de l'Est</h2>
+            <p>
+                Cette vaste zone industrielle alimentait autrefois plusieurs villes de la région. Les bombardements puis
+                l'effondrement des infrastructures ont transformé le secteur en un immense cimetière de béton et d'acier.
+            </p>
+            <p>
+                Dépôts, ateliers, entrepôts et usines abandonnées attirent désormais les survivants à la recherche de
+                ressources rares. Mais les richesses attirent également ceux qui sont prêts à tuer pour les obtenir.
+            </p>
+        </div>
+    </section>
+
+    <section class="zdnd-section reverse">
+        <div class="zdnd-image">
+            <img src="zdnd_aeroport_international.png" alt="Ancien Aéroport International">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>✈️ Ancien Aéroport International</h2>
+            <p>
+                Avant la guerre, cet aéroport constituait l'un des principaux points de transit de la région.
+                Lorsque le conflit a éclaté, il fut réquisitionné par l'armée puis abandonné dans le chaos des derniers jours.
+            </p>
+            <p>
+                Aujourd'hui, les pistes sont silencieuses, les tours de contrôle désertes et les hangars éventrés.
+                Pourtant, des survivants affirment encore apercevoir des lumières au loin certaines nuits.
+            </p>
+            <p>
+                Nul ne sait ce qui s'y déroule réellement. Une chose est certaine : ceux qui s'y aventurent reviennent rarement
+                avec les mêmes réponses.
+            </p>
+        </div>
+    </section>
+
+    <section class="zdnd-section">
+        <div class="zdnd-image">
+            <img src="zdnd_port_industriel_sud_ouest.png" alt="Port Industriel du Sud-Ouest">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>⚓ Port Industriel du Sud-Ouest</h2>
+            <p>
+                Avant la chute du monde, ce port constituait l'une des principales portes commerciales de la région.
+                Durant les derniers mois de la guerre, il fut utilisé pour évacuer matériel, civils et ressources stratégiques.
+            </p>
+            <p>
+                Beaucoup pensent que tout a disparu depuis longtemps. D'autres sont convaincus que certaines cargaisons
+                n'ont jamais quitté les quais. Encore aujourd'hui, des survivants risquent leur vie pour fouiller les docks abandonnés.
+            </p>
+        </div>
+    </section>
+
+    <section class="zdnd-section reverse">
+        <div class="zdnd-image">
+            <img src="zdnd_gare_triage.png" alt="Gare de tri et réseau ferroviaire">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>🚂 Gare de Tri et Réseau Ferroviaire</h2>
+            <p>
+                Durant la guerre, ce complexe ferroviaire servait à l'acheminement de matériel militaire et de populations déplacées.
+                Lorsque les frontières se sont fermées, les trains ont cessé de circuler mais les marchandises sont restées.
+            </p>
+            <p>
+                Des kilomètres de rails rouillés, d'entrepôts abandonnés et de wagons oubliés forment désormais un véritable labyrinthe.
+                Bandits, pillards et aventuriers s'y croisent régulièrement.
+            </p>
+            <p>
+                Dans ce dédale de métal, personne ne viendra vous secourir.
+            </p>
+        </div>
+    </section>
+
+    <section class="zdnd-section">
+        <div class="zdnd-image">
+            <img src="zdnd_ile_contrebandiers.png" alt="Île des Contrebandiers">
+        </div>
+        <div class="zdnd-text">
+            <span class="tag">Zone de Non Droit</span>
+            <h2>🏝️ Île des Contrebandiers</h2>
+            <p>
+                Isolée du reste du territoire, cette petite île semblait autrefois insignifiante.
+                Pourtant, depuis la fin de la guerre, elle est devenue un refuge discret pour ceux qui souhaitent disparaître.
+            </p>
+            <p>
+                Contrebandiers, fugitifs et trafiquants y auraient trouvé refuge loin des regards.
+                Les rumeurs sont nombreuses. Les preuves, beaucoup moins.
+            </p>
+        </div>
+    </section>
 
     <div style="margin-top:60px;">
         <a class="back" href="index.html">← Retour à l'accueil</a>
     </div>
 
-</div>
+    <footer>
+        © Arvelys RP
+    </footer>
 
-<footer>
-    © Arvelys RP
-</footer>
+</div>
 
 </body>
 </html>
