@@ -70,31 +70,38 @@ body{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.03));
+    background:linear-gradient(to top, rgba(0,0,0,0.48), rgba(0,0,0,0.02));
     pointer-events:none;
 }
 
-.card{
+.card,
+.trader-section{
     background:rgba(10,10,10,0.72);
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
-    padding:45px 55px;
     box-shadow:0 0 30px rgba(0,0,0,0.45);
 }
 
-.card h2{
+.card{
+    padding:45px 55px;
+}
+
+.card h2,
+.trader-text h2{
     color:#d4af37;
     font-size:30px;
     margin:0 0 28px;
 }
 
-.card p{
+.card p,
+.trader-text p{
     font-size:20px;
     line-height:1.7;
     margin:0 0 24px;
 }
 
-.card p:last-child{
+.card p:last-child,
+.trader-text p:last-child{
     margin-bottom:0;
 }
 
@@ -127,43 +134,46 @@ body{
     text-shadow:0 0 14px rgba(212,175,55,0.28);
 }
 
-.trader-grid{
+.trader-section{
     display:grid;
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    gap:24px;
+    grid-template-columns:1fr 1fr;
+    gap:34px;
+    align-items:center;
+    margin-top:24px;
+    padding:28px;
+    text-align:left;
 }
 
-.trader-card{
+.trader-section.reverse .trader-image{
+    order:2;
+}
+
+.trader-section.reverse .trader-text{
+    order:1;
+}
+
+.trader-image{
     overflow:hidden;
-    background:rgba(10,10,10,0.72);
-    border:1px solid rgba(212,175,55,0.28);
-    border-radius:14px;
-    box-shadow:0 0 30px rgba(0,0,0,0.45);
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,0.20);
+    box-shadow:0 0 24px rgba(0,0,0,0.55);
 }
 
-.trader-card img{
+.trader-image img{
     width:100%;
-    height:300px;
+    height:340px;
     object-fit:cover;
     display:block;
-    filter:contrast(1.03) saturate(0.96);
+    filter:contrast(1.04) saturate(0.96);
 }
 
-.trader-card .caption{
-    padding:18px 20px 20px;
+.trader-text{
+    padding:10px 18px;
 }
 
-.trader-card h3{
-    margin:0 0 8px;
-    color:#d4af37;
-    font-size:24px;
-}
-
-.trader-card p{
-    margin:0;
-    color:#e8e8e8;
-    font-size:16px;
-    line-height:1.55;
+.trader-text h2{
+    text-align:left;
+    margin-bottom:18px;
 }
 
 footer{
@@ -187,15 +197,28 @@ footer{
         padding:30px 24px;
     }
 
-    .card p{
+    .card p,
+    .trader-text p{
         font-size:18px;
     }
 
-    .trader-grid{
+    .trader-section,
+    .trader-section.reverse{
         grid-template-columns:1fr;
+        text-align:center;
+        padding:22px;
     }
 
-    .trader-card img{
+    .trader-section.reverse .trader-image,
+    .trader-section.reverse .trader-text{
+        order:initial;
+    }
+
+    .trader-text h2{
+        text-align:center;
+    }
+
+    .trader-image img{
         height:240px;
     }
 
@@ -215,7 +238,7 @@ footer{
     <h1 class="title">Traders</h1>
 
     <div class="hero">
-        <img src="hero.png" alt="Les traders d'Arvelys RP devant le magasin général">
+        <img src="traders_hero.png" alt="Les traders d'Arvelys RP devant le magasin général">
     </div>
 
     <section class="card">
@@ -264,73 +287,142 @@ footer{
 
     <h2 class="section-title">Les commerçants d'Arvelys</h2>
 
-    <div class="trader-grid">
+    <section class="trader-section">
+        <div class="trader-image">
+            <img src="trader_general.png" alt="Magasin général">
+        </div>
+        <div class="trader-text">
+            <h2>Magasin général</h2>
+            <p>
+                Le Magasin Général est souvent le premier arrêt des survivants.
+                On y trouve les ressources courantes, les besoins de base, quelques outils,
+                de quoi repartir sur la route et parfois une trouvaille qui tombe au bon moment.
+            </p>
+            <p>
+                Rien n'y est vraiment donné, mais dans un monde où chaque objet compte,
+                un simple comptoir peut vite devenir indispensable.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="general.png" alt="Magasin général">
-            <div class="caption">
-                <h3>Magasin général</h3>
-                <p>Un comptoir utile pour les ressources courantes, les besoins de base et les trouvailles du quotidien.</p>
-            </div>
-        </article>
+    <section class="trader-section reverse">
+        <div class="trader-image">
+            <img src="trader_armurier.png" alt="Armurier">
+        </div>
+        <div class="trader-text">
+            <h2>Armurier</h2>
+            <p>
+                L'Armurier propose armes, munitions et équipements sensibles.
+                Ici, chaque achat peut changer l'issue d'une rencontre,
+                mais chaque balle a un prix.
+            </p>
+            <p>
+                Dans les terres sauvages comme près des <a class="zdnd-link" href="zdnd.html">ZDND</a>,
+                mieux vaut être préparé avant que la situation ne dégénère.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="armurier.png" alt="Armurier">
-            <div class="caption">
-                <h3>Armurier</h3>
-                <p>Armes, munitions et matériel sensible : ici, chaque achat peut changer l'issue d'une rencontre.</p>
-            </div>
-        </article>
+    <section class="trader-section">
+        <div class="trader-image">
+            <img src="trader_banque.png" alt="Banque">
+        </div>
+        <div class="trader-text">
+            <h2>Banque</h2>
+            <p>
+                Malgré l'effondrement du monde, certaines institutions continuent de fonctionner.
+                La Banque permet de gérer son argent, de sécuriser ses économies
+                et de garder une trace des transactions.
+            </p>
+            <p>
+                Les gouvernements ont disparu, mais certains comptent encore chaque billet.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="banque.png" alt="Banque">
-            <div class="caption">
-                <h3>Banque</h3>
-                <p>Argent, dépôts et transactions : même après l'effondrement, certains comptent encore chaque billet.</p>
-            </div>
-        </article>
+    <section class="trader-section reverse">
+        <div class="trader-image">
+            <img src="trader_medecin.png" alt="Médecin">
+        </div>
+        <div class="trader-text">
+            <h2>Médecin</h2>
+            <p>
+                Blessures, infections, fatigue ou simple besoin de matériel médical :
+                le Médecin reste souvent le dernier recours quand le terrain laisse des traces.
+            </p>
+            <p>
+                Ses services coûtent cher, mais l'alternative est parfois bien pire.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="medecin.png" alt="Médecin">
-            <div class="caption">
-                <h3>Médecin</h3>
-                <p>Quand le terrain laisse des traces, les soins coûtent cher, mais l'alternative est souvent pire.</p>
-            </div>
-        </article>
+    <section class="trader-section">
+        <div class="trader-image">
+            <img src="trader_mecanicien.png" alt="Mécanicien">
+        </div>
+        <div class="trader-text">
+            <h2>Mécanicien</h2>
+            <p>
+                Les routes d'Arvelys sont longues, abîmées et rarement sûres.
+                Le Mécanicien assure l'entretien, les réparations et la vente de certaines pièces indispensables.
+            </p>
+            <p>
+                Dans un monde où l'essence est rare et chère, posséder un véhicule est déjà un luxe.
+                Le garder en état en est un autre.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="mecanicien.png" alt="Mécanicien">
-            <div class="caption">
-                <h3>Mécanicien</h3>
-                <p>Pièces, réparations et véhicules : rouler dans ce monde est un luxe qui s'entretient.</p>
-            </div>
-        </article>
+    <section class="trader-section reverse">
+        <div class="trader-image">
+            <img src="trader_pecheur.png" alt="Pêcheur">
+        </div>
+        <div class="trader-text">
+            <h2>Pêcheur</h2>
+            <p>
+                Installé près des embarcations, le Pêcheur fournit matériel de pêche,
+                appâts et équipements nautiques.
+            </p>
+            <p>
+                Pour ceux qui savent être patients, la mer et les rivières restent
+                une source précieuse de nourriture, de commerce et parfois d'évasion.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="pecheur.png" alt="Pêcheur">
-            <div class="caption">
-                <h3>Pêcheur</h3>
-                <p>Le littoral nourrit encore ceux qui savent patienter, négocier et garder un œil sur l'horizon.</p>
-            </div>
-        </article>
+    <section class="trader-section">
+        <div class="trader-image">
+            <img src="trader_chasseur.png" alt="Chasseur">
+        </div>
+        <div class="trader-text">
+            <h2>Chasseur</h2>
+            <p>
+                Le Chasseur connaît les forêts, les pistes et les dangers qui rôdent loin des routes.
+                Arcs, matériel de traque, peaux et ressources issues de la chasse passent régulièrement par son comptoir.
+            </p>
+            <p>
+                Depuis que les <a class="zdnd-link" href="humains.html">humains</a> se font plus rares,
+                la nature a repris ses droits. Elle nourrit encore ceux qui savent la respecter.
+            </p>
+        </div>
+    </section>
 
-        <article class="trader-card">
-            <img src="chasseur.png" alt="Chasseur">
-            <div class="caption">
-                <h3>Chasseur</h3>
-                <p>Faune, trophées et matériel de chasse : la nature a repris ses droits, et certains en vivent.</p>
-            </div>
-        </article>
-
-        <article class="trader-card">
-            <img src="saloon.png" alt="Saloon">
-            <div class="caption">
-                <h3>Saloon</h3>
-                <p>Un lieu pour souffler, boire un coup, écouter les rumeurs ou conclure une affaire discrète.</p>
-            </div>
-        </article>
-
-    </div>
+    <section class="trader-section reverse">
+        <div class="trader-image">
+            <img src="trader_saloon.png" alt="Saloon">
+        </div>
+        <div class="trader-text">
+            <h2>Saloon</h2>
+            <p>
+                Le Saloon est l'un des rares endroits où l'on peut encore souffler,
+                boire un verre, manger quelque chose et écouter les rumeurs qui circulent.
+            </p>
+            <p>
+                À Arvelys, les meilleures informations ne se trouvent pas toujours dans les bunkers.
+                Parfois, elles s'achètent autour d'un comptoir.
+            </p>
+        </div>
+    </section>
 
     <div style="margin-top:60px;">
         <a class="back" href="index.html">← Retour à l'accueil</a>
