@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compagnons - Arvelys RP</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+
+    background-color:#030303;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('carbone_site.png');
+    background-repeat:repeat;
+
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+.page{
+    max-width:1000px;
+    margin:0 auto;
+    padding:60px 20px 30px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:45px;
+    color:#d4af37;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.2s ease;
+}
+
+.back:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+    transform:scale(1.04);
+}
+
+.title{
+    margin:25px 0 45px;
+    color:#d4af37;
+    font-size:52px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:0 0 14px rgba(212,175,55,0.35);
+}
+
+.card{
+    background:rgba(10,10,10,0.72);
+    border:1px solid rgba(212,175,55,0.28);
+    border-radius:14px;
+    padding:45px 55px;
+    box-shadow:0 0 30px rgba(0,0,0,0.45);
+}
+
+.card h2{
+    color:#d4af37;
+    font-size:32px;
+    margin:0 0 22px;
+    text-shadow:0 0 10px rgba(212,175,55,0.25);
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.75;
+    margin:0 0 22px;
+}
+
+.card p:last-child{
+    margin-bottom:0;
+}
+
+.presentation-block{
+    max-width:820px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.info-list{
+    max-width:640px;
+    margin:0 auto 26px;
+    padding:0;
+    list-style:none;
+    text-align:left;
+}
+
+.info-list li{
+    position:relative;
+    font-size:20px;
+    line-height:1.6;
+    margin:12px 0;
+    padding-left:32px;
+}
+
+.info-list li::before{
+    content:"✦";
+    position:absolute;
+    left:0;
+    color:#d4af37;
+    text-shadow:0 0 10px rgba(212,175,55,0.45);
+}
+
+.separator{
+    width:120px;
+    height:1px;
+    margin:38px auto;
+    background:linear-gradient(90deg, transparent, rgba(212,175,55,0.85), transparent);
+    box-shadow:0 0 12px rgba(212,175,55,0.45);
+}
+
+.gold-link{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.2s ease;
+}
+
+.gold-link:hover{
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
+}
+
+.gold-text{
+    color:#d4af37;
+    font-weight:bold;
+}
+
+footer{
+    color:#444;
+    font-size:12px;
+    text-align:center;
+    margin-top:150px;
+    padding-bottom:25px;
+}
+
+@media(max-width:900px){
+    .page{
+        padding:35px 18px 25px;
+    }
+
+    .title{
+        font-size:38px;
+    }
+
+    .card{
+        padding:30px 24px;
+    }
+
+    .card h2{
+        font-size:28px;
+    }
+
+    .card p,
+    .info-list li{
+        font-size:18px;
+    }
+
+    .info-list{
+        text-align:left;
+    }
+
+    footer{
+        margin-top:90px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+
+    <h1 class="title">Compagnons</h1>
+
+    <section class="card">
+        <div class="presentation-block">
+            <h2>Le rôle "Compagnons"</h2>
+
+            <p>
+                Les <span class="gold-text">Compagnons</span> sont des joueurs
+                qui ont pris le temps de s'investir dans la communauté et de laisser leur empreinte sur Arvelys RP.
+            </p>
+
+            <p>
+                Ce rôle s'obtient gratuitement avec le temps grâce à votre implication sur le Discord
+                et à votre progression en jeu.
+            </p>
+
+            <ul class="info-list">
+                <li>Être actif au sein de la communauté Discord.</li>
+                <li>Atteindre 5000 points de gloire en jeu.</li>
+            </ul>
+
+            <p>
+                Le rôle <span class="gold-text">Compagnons</span> permet notamment
+                de proposer des projets communautaires et de bénéficier d'un accompagnement pour
+                l'organisation d'événements RP.
+            </p>
+
+            <div class="separator"></div>
+
+            <h2>Rejoindre le Discord</h2>
+
+            <p>
+                <a href="https://discord.gg/tHbhQdDxFR"
+                   target="_blank"
+                   class="gold-link">
+                   👉 Discord d'Arvelys RP
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <div style="margin-top:60px;">
+        <a class="back" href="index.html">← Retour à l'accueil</a>
+    </div>
+
+<footer>
+    © Arvelys RP
+</footer>
+
+</div>
+
+</body>
+</html>
