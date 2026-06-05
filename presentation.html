@@ -10,27 +10,25 @@
 body{
     margin:0;
     min-height:100vh;
-
     background-color:#030303;
     background-image:
         linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
         url('carbone_site.png');
     background-repeat:repeat;
-
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
 }
 
 .page{
-    max-width:1000px;
+    max-width:1120px;
     margin:0 auto;
-    padding:60px 20px 30px;
+    padding:55px 20px 30px;
 }
 
 .back{
     display:inline-block;
-    margin-bottom:45px;
+    margin-bottom:24px;
     color:#d4af37;
     text-decoration:none;
     font-size:18px;
@@ -42,44 +40,113 @@ body{
     transform:scale(1.04);
 }
 
-.title{
-    margin:0 0 45px;
-    color:#d4af37;
-    font-size:52px;
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    text-shadow:0 0 14px rgba(212,175,55,0.35);
+.page-title{
+    text-align:center;
+    margin-bottom:34px;
+    overflow:hidden;
 }
 
-.page-banner{
-    display:block;
-    width:700px;
-    max-width:95%;
-    height:auto;
-    margin:25px auto 30px auto;
+.page-title h1{
+    margin:0;
+    color:#d4af37;
+    font-size:72px;
+    line-height:1;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 8px rgba(212,175,55,0.72),
+        0 0 20px rgba(212,175,55,0.38),
+        0 4px 0 rgba(0,0,0,0.80);
+    position:relative;
+    display:inline-block;
 }
-    
-.card{
+
+.page-title h1::before,
+.page-title h1::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:210px;
+    height:2px;
+    background:linear-gradient(to right, transparent, rgba(212,175,55,0.95));
+    box-shadow:0 0 12px rgba(212,175,55,0.50);
+}
+
+.page-title h1::before{
+    right:100%;
+    margin-right:26px;
+}
+
+.page-title h1::after{
+    left:100%;
+    margin-left:26px;
+    transform:scaleX(-1);
+}
+
+.card,
+.presentation-section{
     background:rgba(10,10,10,0.72);
     border:1px solid rgba(212,175,55,0.28);
     border-radius:14px;
-    padding:45px 55px;
     box-shadow:0 0 30px rgba(0,0,0,0.45);
 }
 
+.presentation-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:34px;
+    align-items:center;
+    margin-top:24px;
+    padding:24px;
+    text-align:left;
+}
+
+.presentation-section.reverse .presentation-image{
+    order:2;
+}
+
+.presentation-section.reverse .presentation-text{
+    order:1;
+}
+
+.presentation-image{
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,0.20);
+    box-shadow:0 0 24px rgba(0,0,0,0.55);
+    background:#050505;
+}
+
+.presentation-image img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    filter:contrast(1.04) saturate(0.98);
+}
+
+.presentation-text{
+    padding:10px 18px;
+}
+
+.presentation-text h2,
 .card h2{
     color:#d4af37;
     font-size:30px;
-    margin:0 0 28px;
+    margin:0 0 24px;
+    text-shadow:0 0 10px rgba(212,175,55,0.24);
 }
 
+.presentation-text p,
 .card p{
     font-size:20px;
     line-height:1.7;
-    margin:0 0 24px;
+    margin:0 0 20px;
 }
 
+.presentation-text p:last-child,
 .card p:last-child{
     margin-bottom:0;
 }
@@ -95,11 +162,16 @@ body{
     filter:drop-shadow(0 0 10px rgba(212,175,55,0.75));
 }
 
+.highlight{
+    color:#d4af37;
+    font-weight:bold;
+}
+
 footer{
     color:#444;
     font-size:12px;
     text-align:center;
-    margin-top:150px;
+    margin-top:120px;
     padding-bottom:25px;
 }
 
@@ -108,14 +180,45 @@ footer{
         padding:35px 18px 25px;
     }
 
-    .title{
-        font-size:38px;
+    .page-title h1{
+        font-size:42px;
+        letter-spacing:2px;
     }
 
-    .card{
-        padding:30px 24px;
+    .page-title h1::before,
+    .page-title h1::after{
+        width:70px;
+        margin-right:14px;
+        margin-left:14px;
     }
 
+    .presentation-section,
+    .presentation-section.reverse{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:22px;
+    }
+
+    .presentation-section.reverse .presentation-image,
+    .presentation-section.reverse .presentation-text{
+        order:initial;
+    }
+
+    .presentation-image img{
+        height:240px;
+    }
+
+    .presentation-text{
+        padding:8px 4px;
+    }
+
+    .presentation-text h2,
+    .card h2{
+        font-size:26px;
+        text-align:center;
+    }
+
+    .presentation-text p,
     .card p{
         font-size:18px;
     }
@@ -133,61 +236,149 @@ footer{
 
     <a class="back" href="index.html">← Retour à l'accueil</a>
 
-    <img src="presentation_site.png"
-     alt="Présentation"
-     class="page-banner">
+    <div class="page-title">
+        <h1>Présentation</h1>
+    </div>
 
-    <section class="card">
-        <h2>Bienvenue sur Arvelys RP</h2>
+    <section class="presentation-section">
+        <div class="presentation-image">
+            <img src="presentation_ruines_nature.jpg" alt="Ancien terrain abandonné repris par la nature">
+        </div>
 
-        <p>
-            Arvelys RP est un serveur SCUM francophone orienté survie, immersion et jeu de rôle dans un monde post-apocalyptique réaliste.
-        </p>
+        <div class="presentation-text">
+            <h2>Bienvenue sur Arvelys RP</h2>
 
-        <p>
-            Ici, il n’y a pas de zombies : vous croisez d’autres <a class="zdnd-link" href="humains.html">humains</a> amicaux ou hostiles, les redoutables <a class="zdnd-link" href="sentinelles.html">Sentinelles</a>, ainsi que les <a class="zdnd-link" href="zdnd.html">ZDND</a>, des secteurs où les règles et les codes humains semblent avoir été oubliés.
-        </p>
+            <p>
+                Arvelys RP est un serveur SCUM francophone orienté survie, immersion
+                et jeu de rôle dans un monde post-apocalyptique réaliste.
+            </p>
 
-        <p>
-            Les <a class="zdnd-link" href="largages.html">largages</a> aériens, vestiges d’une armée énigmatique, attirent les plus audacieux et provoquent souvent des rencontres aussi précieuses que dangereuses.
-        </p>
+            <p>
+                Ici, il n’y a pas de zombies : vous croisez d’autres
+                <a class="zdnd-link" href="humains.html">humains</a> amicaux ou hostiles,
+                les redoutables <a class="zdnd-link" href="sentinelles.html">Sentinelles</a>,
+                ainsi que les <a class="zdnd-link" href="zdnd.html">ZDND</a>, des secteurs où les règles
+                et les codes humains semblent avoir été oubliés.
+            </p>
 
-        <p>
-            L’essence est rare, les <a class="zdnd-link" href="traders.html">traders</a> sont là pour faire des affaires et non pour enrichir les survivants.
-        </p>
+            <p>
+                Les <a class="zdnd-link" href="largages.html">largages</a> aériens,
+                vestiges d’une armée énigmatique, attirent les plus audacieux et provoquent
+                souvent des rencontres aussi précieuses que dangereuses.
+            </p>
+        </div>
+    </section>
 
-        <p>
-            Chaque ressource se mérite et chaque décision est un pari dans un monde où tension et immersion dominent.
-        </p>
+    <section class="presentation-section reverse">
+        <div class="presentation-image">
+            <img src="presentation_region_cotiere.jpg" alt="Vue côtière de la région d'Arvelys">
+        </div>
 
-        <p>
-            Cette expérience repose sur des <a class="zdnd-link" href="reglages.html">réglages serveur</a> pensés pour renforcer la cohérence de l'univers tout en conservant un équilibre entre réalisme, défi et plaisir de jeu.
-        </p>
+        <div class="presentation-text">
+            <h2>Une région pleine de mystères</h2>
 
-        <p>
-            Pour mieux comprendre l'univers, les Sentinelles, les ZDND, les largages et les nombreux mystères qui entourent la région, vous pouvez consulter le <a class="zdnd-link" href="lore.html">lore</a> du serveur.
-        </p>
+            <p>
+                Forêts, villages abandonnés, îles isolées, installations militaires oubliées
+                et infrastructures en ruine composent la région d'Arvelys.
+            </p>
 
-        <p>
-            Les joueurs sont libres de lancer leurs propres projets. Commerce, communauté, groupe de survivants ou événement RP : toute initiative contribuant à faire vivre le serveur est encouragée et peut être accompagnée par le staff.
-        </p>
+            <p>
+                Chaque route peut mener à une découverte, une opportunité... ou un danger.
+            </p>
 
-        <p>
-            Plus d'<a class="zdnd-link" href="informations.html">informations</a> ?
-        </p>
+            <p>
+                Les <a class="zdnd-link" href="sentinelles.html">Sentinelles</a> continuent parfois
+                de protéger certains secteurs tandis que les <a class="zdnd-link" href="largages.html">largages</a>
+                militaires attirent régulièrement les survivants les plus audacieux.
+            </p>
+        </div>
+    </section>
 
-        <p>
-            Votre histoire commence ici.
-        </p>
+    <section class="presentation-section">
+        <div class="presentation-image">
+            <img src="presentation_trader.png" alt="Trader du magasin général">
+        </div>
+
+        <div class="presentation-text">
+            <h2>Un monde qui vit grâce à vous</h2>
+
+            <p>
+                L’essence est rare, les <a class="zdnd-link" href="traders.html">traders</a>
+                sont là pour faire des affaires et non pour enrichir les survivants.
+            </p>
+
+            <p>
+                Chaque ressource se mérite et chaque décision est un pari dans un monde où tension
+                et immersion dominent.
+            </p>
+
+            <p>
+                Les joueurs sont libres de lancer leurs propres projets. Commerce, communauté,
+                groupe de survivants ou événement RP : toute initiative contribuant à faire vivre
+                le serveur est encouragée et peut être accompagnée par le staff.
+            </p>
+        </div>
+    </section>
+
+    <section class="presentation-section reverse">
+        <div class="presentation-image">
+            <img src="presentation_quad.png" alt="Survivant en quad partant explorer la région">
+        </div>
+
+        <div class="presentation-text">
+            <h2>Explorez. Survivez. Écrivez votre histoire.</h2>
+
+            <p>
+                Les routes sont longues et dangereuses, mais elles mènent toujours à quelque chose d'inattendu.
+            </p>
+
+            <p>
+                Seul ou en groupe, chaque trajet peut devenir une aventure : explorer, commercer,
+                rencontrer... ou affronter.
+            </p>
+
+            <p class="highlight">
+                Arvelys RP ne vous guide pas. C’est à vous de tracer votre propre chemin.
+            </p>
+        </div>
+    </section>
+
+    <section class="presentation-section">
+        <div class="presentation-image">
+            <img src="presentation_sentinelle.png" alt="Sentinelle dans un secteur contrôlé">
+        </div>
+
+        <div class="presentation-text">
+            <h2>Votre histoire commence ici</h2>
+
+            <p>
+                Pour mieux comprendre l'univers, les Sentinelles, les ZDND, les largages
+                et les nombreux mystères qui entourent la région, vous pouvez consulter
+                le <a class="zdnd-link" href="lore.html">lore</a> du serveur.
+            </p>
+
+            <p>
+                Cette expérience repose sur des <a class="zdnd-link" href="reglages.html">réglages serveur</a>
+                pensés pour renforcer la cohérence de l'univers tout en conservant un équilibre entre réalisme,
+                défi et plaisir de jeu.
+            </p>
+
+            <p>
+                Plus d'<a class="zdnd-link" href="informations.html">informations</a> ?
+                <span class="highlight">Votre histoire commence ici.</span>
+            </p>
+        </div>
     </section>
 
     <div style="margin-top:60px;">
         <a class="back" href="index.html">← Retour à l'accueil</a>
     </div>
 
-<footer>
-    © Arvelys RP
-</footer>
+    <footer>
+        © Arvelys RP
+    </footer>
+
+</div>
 
 </body>
 </html>
