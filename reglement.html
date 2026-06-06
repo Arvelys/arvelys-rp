@@ -85,7 +85,7 @@ body{
 .page-title span::after{
     left:100%;
     margin-left:25px;
-}  
+}
 
 .card{
     background:rgba(10,10,10,0.72);
@@ -112,6 +112,18 @@ body{
     font-size:36px;
     margin:0 0 22px;
     text-align:center;
+}
+
+.section h3{
+    color:#d4af37;
+    font-size:24px;
+    margin:35px 0 12px;
+    text-align:left;
+    text-shadow:0 0 10px rgba(212,175,55,0.22);
+}
+
+.section h3:first-of-type{
+    margin-top:35px;
 }
 
 .section p{
@@ -190,12 +202,12 @@ footer{
     }
 
     .page-title span{
-    font-size:42px;
+        font-size:42px;
     }
 
     .page-title span::before,
     .page-title span::after{
-    width:70px;
+        width:70px;
     }
 
     .card{
@@ -206,6 +218,11 @@ footer{
 
     .section h2{
         font-size:28px;
+    }
+
+    .section h3{
+        font-size:21px;
+        text-align:center;
     }
 
     .section p,
@@ -238,6 +255,7 @@ footer{
     <div class="page-title">
         <span>RÈGLEMENT</span>
     </div>
+
     <section class="card">
         <div class="section">
             <h2>Règles Générales</h2>
@@ -246,18 +264,18 @@ footer{
                 <li class="li-space-before">Le RolePlay et le Fair-Play sont obligatoires en toutes circonstances.</li>
                 <li>Toute agression doit avoir une raison RP valable.</li>
                 <li>Jouez la peur, la douleur et les conséquences de vos actions.</li>
-                <li>Les menaces ou insultes sont autorisées s'ils restent cohérents RP.</li>
+                <li>Les menaces ou insultes sont autorisées si elles restent cohérentes RP.</li>
                 <li>Durée maximale d'un enlèvement : 2 heures.</li>
-                <li>Maximum 50 % de l'inventaire, des armes et de l'argent transporté.</li>   
-                <li>🎭 Une personne portant un masque n'est reconnaissable plus tard que si elle porte les memes vetements.
-            </p>
+                <li>Maximum 50 % de l'inventaire, des armes et de l'argent transporté.</li>
+                <li>🎭 Une personne portant un masque n'est reconnaissable plus tard que si elle porte les mêmes vêtements.</li>
             </ul>
 
             <p class="lexique-link">
-                😉 Privilégiez les interactions et les scènes RP avant la violence..
+                😉 Privilégiez les interactions et les scènes RP avant la violence.
             </p>
         </div>
     </section>
+
     <section class="card">
         <div class="section">
             <h2>Obligatoire</h2>
@@ -275,12 +293,14 @@ footer{
             </p>
         </div>
     </section>
+
     <section class="card">
         <div class="section">
             <h2>Interdit</h2>
 
+            <h3>En général</h3>
             <ul>
-                <li class="li-space-before">Le Metagaming.</li>
+                <li>Le Metagaming.</li>
                 <li>Le Powergaming.</li>
                 <li>Le Force RP.</li>
                 <li>Le Revenge Kill.</li>
@@ -290,11 +310,18 @@ footer{
                 <li>Le Stream Sniping.</li>
                 <li>Le Win RP.</li>
                 <li>L'exploitation de bugs ou de failles du jeu.</li>
+            </ul>
 
-                <li class="li-space-before">Emmener quelqu'un au distributeur et le forcer à retirer.</li>
+            <h3>En jeu</h3>
+            <ul>
+                <li>Emmener quelqu'un au distributeur et le forcer à retirer.</li>
                 <li>Prendre la carte bancaire.</li>
                 <li>Les braquages aux Traders.</li>
-                <li class="li-space-before">Les insultes HRP, le harcèlement et les comportements toxiques.</li>
+            </ul>
+
+            <h3>HRP</h3>
+            <ul>
+                <li>Les insultes HRP, le harcèlement et les comportements toxiques.</li>
                 <li>Toute action visant volontairement à nuire à l'expérience de jeu des autres joueurs.</li>
             </ul>
 
@@ -304,6 +331,7 @@ footer{
             </p>
         </div>
     </section>
+
     <section class="card">
         <div class="section">
             <h2><a href="zdnd.html" class="zdnd-link">Zones de Non Droit</a></h2>
@@ -316,48 +344,53 @@ footer{
                 <li>Les mines sont autorisées si votre drapeau est en ZDND.</li>
                 <li>Aucun tir n'est autorisé à travers les frontières d'une ZDND.</li>
                 <li>Un véhicule peut être volé ou détruit sans sommation.</li>
-                <p class="lexique-link li-space-before">
-                Les ZDND sont toutes les zones protégés par des <a href="sentinelles.html" class="zdnd-link">Sentinelles</a> 
-                ainsi que tous les secteurs rouges visibles sur votre carte .</li>
             </ul>
+
+            <p class="lexique-link">
+                Les ZDND sont toutes les zones protégées par des
+                <a href="sentinelles.html" class="zdnd-link">Sentinelles</a>
+                ainsi que tous les secteurs rouges visibles sur votre carte.
+            </p>
 
             <p class="lexique-link">
                 Plus d'infos sur les ZDND cliquez 👉<a href="zdnd.html" class="zdnd-link"> ici</a>
             </p>
         </div>
     </section>
-<section class="card">
-    <div class="section">
-        <h2>Mort RP</h2>
 
-        <ul>
-            <li class="li-space-before">
-                Si vous mourez seul, sans témoin, vous pouvez continuer à jouer ce même personnage,
-                même si vous n'avez plus assez d'argent et êtes contraint de le recréer.
-                Ne parlez jamais de cet... incident.
-            </li>
+    <section class="card">
+        <div class="section">
+            <h2>Mort RP</h2>
 
-            <li>
-                Mourir devant témoins = Mort RP,
-                sauf si les personnes présentes décident de n'avoir rien vu.
-                Dans ce cas, la situation est considérée comme un coma.
-                Vous oublierez les 20 dernières minutes.
-            </li>
+            <ul>
+                <li class="li-space-before">
+                    Si vous mourez seul, sans témoin, vous pouvez continuer à jouer ce même personnage,
+                    même si vous n'avez plus assez d'argent et êtes contraint de le recréer.
+                    Ne parlez jamais de cet... incident.
+                </li>
 
-            <li>
-                Il est interdit d'utiliser, après votre retour en jeu, des informations obtenues lors de votre mort.
-            </li>
+                <li>
+                    Mourir devant témoins = Mort RP,
+                    sauf si les personnes présentes décident de n'avoir rien vu.
+                    Dans ce cas, la situation est considérée comme un coma.
+                    Vous oublierez les 20 dernières minutes.
+                </li>
 
-            <li>
-                Ne revenez pas sur les lieux de votre mort.
-            </li>
+                <li>
+                    Il est interdit d'utiliser, après votre retour en jeu, des informations obtenues lors de votre mort.
+                </li>
 
-            <p class="lexique-link li-space-before">
+                <li>
+                    Ne revenez pas sur les lieux de votre mort.
+                </li>
+            </ul>
+
+            <p class="lexique-link">
                 En cas de Mort RP, vous devrez créer un nouveau personnage :
-                nouveau nom, nouveau corps, nouvelle histoire.</li>
-        </ul>
-    </div>
-</section>
+                nouveau nom, nouveau corps, nouvelle histoire.
+            </p>
+        </div>
+    </section>
 
     <section class="card">
         <div class="section">
@@ -385,31 +418,33 @@ footer{
             <ul>
                 <li class="li-space-before">Les pièges et mines ne doivent jamais être placés sur les routes.</li>
                 <li>Les pièges et mines ne doivent jamais être placés dans le seul but de provoquer des morts gratuites.</li>
-                <p class="lexique-link li-space-before">
-                Toute utilisation abusive pourra être sanctionnée par le staff.</li>
             </ul>
+
+            <p class="lexique-link">
+                Toute utilisation abusive pourra être sanctionnée par le staff.
+            </p>
         </div>
     </section>
 
-<section class="card">
-    <div class="section">
-        <h2>Litiges</h2>
+    <section class="card">
+        <div class="section">
+            <h2>Litiges</h2>
 
-        <ul>
-            <li class="li-space-before">
-                S'énerver ne sert à rien, nous sommes là pour vous aider.
-            </li>
+            <ul>
+                <li class="li-space-before">
+                    S'énerver ne sert à rien, nous sommes là pour vous aider.
+                </li>
 
-            <li>
-                En cas de conflit ou de report, une vidéo constitue toujours la meilleure preuve.
-            </li>
-        </ul>
+                <li>
+                    En cas de conflit ou de report, une vidéo constitue toujours la meilleure preuve.
+                </li>
+            </ul>
 
-        <p class="lexique-link">
-            L'absence de preuve pourra empêcher le staff de prendre une décision en votre faveur.
-        </p>
-    </div>
-</section>
+            <p class="lexique-link">
+                L'absence de preuve pourra empêcher le staff de prendre une décision en votre faveur.
+            </p>
+        </div>
+    </section>
 
     <section class="card">
         <div class="section">
@@ -420,9 +455,12 @@ footer{
                 <li>Toute tentative de contournement du règlement sera sanctionnée.</li>
                 <li>Le règlement ne peut pas couvrir toutes les situations possibles.</li>
                 <li>Le bon sens prime toujours sur le règlement.</li>
-                <p class="lexique-link li-space-before">
-                Le staff se réserve le droit de sanctionner tout comportement nuisible à l'expérience générale du serveur, même s'il n'est pas explicitement mentionné dans ce règlement.</li>
             </ul>
+
+            <p class="lexique-link">
+                Le staff se réserve le droit de sanctionner tout comportement nuisible à l'expérience générale du serveur,
+                même s'il n'est pas explicitement mentionné dans ce règlement.
+            </p>
         </div>
     </section>
 
