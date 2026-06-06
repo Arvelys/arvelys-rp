@@ -112,6 +112,72 @@ body{
     color:#d4af37;
 }
 
+
+.card p{
+    font-size:19px;
+    line-height:1.7;
+    max-width:820px;
+    margin:0 auto 18px;
+}
+
+.card .intro{
+    color:#f1f1f1;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.settings-list{
+    max-width:760px;
+    margin:0 auto 28px;
+}
+
+.settings-list li{
+    border-bottom:1px solid rgba(212,175,55,0.14);
+    padding:7px 0;
+}
+
+.settings-list li:last-child{
+    border-bottom:none;
+}
+
+.sub-title{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+    margin:32px 0 18px;
+}
+
+.warning-box{
+    max-width:820px;
+    margin:28px auto 0;
+    padding:24px 28px;
+    border:1px solid rgba(212,175,55,0.35);
+    border-radius:12px;
+    background:rgba(0,0,0,0.28);
+}
+
+.warning-box h3{
+    color:#d4af37;
+    font-size:24px;
+    margin:0 0 18px;
+}
+
+.warning-box ul{
+    max-width:650px;
+    margin:16px auto 24px;
+}
+
+.warning-box li{
+    font-size:18px;
+    line-height:1.55;
+    margin-bottom:8px;
+}
+
+.small-note{
+    color:#e8e8e8;
+    font-size:17px !important;
+}
+
 .notice{
     color:#d4af37;
     font-size:22px;
@@ -209,7 +275,7 @@ footer{
         <h2>Communication</h2>
         <ul>
             <li><strong>Chat Global/Local/Squad :</strong> Désactivé</li>
-            <li><strong>Vocal Uniquement </li>
+            <li><strong>Vocal :</strong> Uniquement</li>
         </ul>
     </section>
 
@@ -297,66 +363,66 @@ footer{
     </section>
 
     <section class="card">
-        <h2>Réapparition & Mort auto</h2>
-        <ul>
-            <p>
-                Réapparition.
-            </p
+        <h2>⚰️ Réapparition & Mort automatique</h2>
+
+        <p class="intro">
+            La mort n'est pas anodine sur Arvelys RP. Chaque réapparition a un coût, et une mauvaise anticipation peut entraîner la perte définitive de votre personnage.
+        </p>
+
+        <div class="sub-title">Réapparition</div>
+        <ul class="settings-list">
+            <li><strong>Réapparition aléatoire :</strong> 2 500 crédits.</li>
+            <li><strong>Réapparition en abri / lit :</strong> 2 000 crédits.</li>
+            <li><strong>Réapparition en abri hors zone de drapeau :</strong> 1 500 crédits.</li>
+            <li><strong>Réapparition par secteur :</strong> désactivée afin d'éviter les retours immédiats sur zone.</li>
+            <li><strong>Réapparition squad :</strong> 3 000 crédits.</li>
+            <li><strong>Mort permanente automatique :</strong> activée si le solde passe sous les 5 000 crédits après paiement.</li>
         </ul>
-        <ul>                                                            >
-            <li><strong>Aléatoire :</strong> 2 500 crédits.</li>
-            <li><strong>Abri/Lit  :</strong> 2 000 crédits.</li>
-            <li><strong>En abri hors zone de drapeau :</strong> 1500</li>
-            <li><strong>Respawn secteur :</strong> désactivée afin d'éviter les retours sur zone.</li>
-            <li><strong>Prix respawn squad :</strong> 3000</li>
-            <li><strong>Mort permanente :</strong> Activée si -5000 crédit en banque</li>
-        </ul>
-        <ul>
+
+        <div class="warning-box">
+            <h3>⚠️ Mort Permanente (Automatique)</h3>
+
             <p>
-                ⚠️ Mort Permanente (Automatique)
-            </p               
-        </ul>
-        <ul>                                                            >
-            <p>Si les frais de réapparition font passer votre solde sous les 5 000 crédits, votre personnage subit 
-                une mort permanente automatique.</p>
-        </ul>                                                            >
-            <p>
-                Cette sanction entraîne :
+                Si les frais de réapparition font passer votre solde sous les <strong>5 000 crédits</strong>, votre personnage subit une <strong>mort permanente automatique</strong>.
             </p>
-        </ul>                                                            >
-            <li>La suppression définitive du personnage.</li>
-            <li>La perte de toutes ses possessions.</li>
-            <li>La perte de tous ses véhicules.</li>
-            <li>La perte de toutes ses constructions, abris et coffres.</li>
-            <li>L'obligation de créer un nouveau personnage.</li>
+
+            <div class="sub-title">Cette sanction entraîne :</div>
+            <ul>
+                <li>La suppression définitive du personnage.</li>
+                <li>La perte de toutes ses possessions.</li>
+                <li>La perte de tous ses véhicules.</li>
+                <li>La perte de toutes ses constructions, abris et coffres.</li>
+                <li>L'obligation de créer un nouveau personnage.</li>
+            </ul>
+
             <p>
-                Cette mort permanente n'est pas forcément une Mort RP complète (voir règlement « Mort RP »), mais elle
-                en partage une grande partie des conséquences.
+                Cette mort permanente n'est pas forcément une Mort RP complète (voir règlement « Mort RP »), mais elle en partage une grande partie des conséquences.
             </p>
+
             <p>
-                Selon les circonstances, ses effets peuvent être plus ou moins sévères. Un joueur disposant des compétences
-                nécessaires ou d'alliés de confiance pourra parfois limiter une partie des pertes.
+                Selon les circonstances, ses effets peuvent être plus ou moins sévères. Un joueur disposant des compétences nécessaires ou d'alliés de confiance pourra parfois limiter une partie des pertes.
             </p>
+
             <p>
-                Il est autorisé de retourner à votre domicile ou sur vos anciens lieux de stockage afin de tenter de récupérer
-                certaines possessions, mais uniquement à partir de 2 heures après la création du nouveau personnage.
+                Il est autorisé de retourner à votre domicile ou sur vos anciens lieux de stockage afin de tenter de récupérer certaines possessions, mais uniquement <strong>à partir de 2 heures après la création du nouveau personnage</strong>.
             </p>
+
             <p>
                 Toute récupération devra être effectuée de manière cohérente et crédible en RolePlay.
             </p>
+
             <p>
-                ⚠️ Le nouveau personnage ne possède aucun souvenir de la vie, 
-                des connaissances ou des relations de l'ancien personnage.
+                ⚠️ <strong>Le nouveau personnage ne possède aucun souvenir de la vie, des connaissances ou des relations de l'ancien personnage.</strong>
             </p>
+
             <p>
-                Le staff n'interviendra jamais pour déverrouiller des coffres, transférer des biens, récupérer des véhicules,
-                restituer des possessions ou contourner les conséquences d'une mort permanente automatique.
+                Le staff n'interviendra <strong>jamais</strong> pour déverrouiller des coffres, transférer des biens, récupérer des véhicules, restituer des possessions ou contourner les conséquences d'une mort permanente automatique.
             </p>
-            <p>
-                Assurez-vous de toujours conserver une réserve financière suffisante. Dans Arvelys RP, la survie dépend aussi
-                de votre capacité à anticiper les coups durs.
+
+            <p class="small-note">
+                Assurez-vous de toujours conserver une réserve financière suffisante. Dans Arvelys RP, la survie dépend aussi de votre capacité à anticiper les coups durs.
             </p>
-        </ul>
+        </div>
     </section>
 
     <section class="card">
